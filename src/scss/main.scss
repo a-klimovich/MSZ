@@ -3,4 +3,9 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+
+// components
+@import "./components/header";
+
+// slick slider
 @import "slick-theme";

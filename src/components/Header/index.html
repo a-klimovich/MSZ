@@ -1,4 +1,104 @@
-<header>
-  <div class="container">
+<header class="header">
+  <div class="header__wrapper">
+    <div class="logo">
+      <a href="#">
+        <img src="./assets/logo-main.png" alt="">
+      </a>
+    </div>
+  
+    <div class="menu-wrapper">
+      <nav class="nav" title="">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Главная
+            </a>
+  
+            <ul class="drop-down__list list-reset">
+              <li><a href="#">link drow menu</a></li>
+              <li><a href="#">link drow menu</a></li>
+              <li><a href="#">link drow menu</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Компания
+            </a>
+          </li>
+          
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Продукция
+            </a>
+          </li>
+          
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Новости
+            </a>
+          </li>
+          
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Информация
+            </a>
+          </li>
+          
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="short-info">
+        <div class="short-info-wrapper">
+          @@include('./base/Short-info-item.html', {
+            'image': './assets/home_icon_performance.svg',
+            'title': 'Производительность',
+            'subtitle': '45 тонн сыра в сутки',
+          })
+          @@include('./base/Short-info-item.html', {
+            'image': './assets/home_icon_wide-selection.svg',
+            'title': 'Широкий выбор',
+            'subtitle': '150 наименований',
+          })
+          @@include('./base/Short-info-item.html', {
+            'image': './assets/home_icon_export.svg',
+            'title': 'Экспорт',
+            'subtitle': '90% продукции',
+          })
+        </div>
+  
+        <a href="#" class="link-action download-prices">
+          @@include('../../assets/download-icon.svg')
+          СКАЧАТЬ ПРАЙС
+        </a>
+  
+        <a href="#" class="link-action connect-with-us">
+          @@include('../../assets/email-icon.svg')
+          НАПИШИТЕ НАМ
+        </a>
+      </div>
+    </div>
+  
+    <div class="lang-search-wrapper">
+      <ul class="language list-reset">
+        <li><a href="#"><img src="./assets/lang-ru.png" alt="lang-ru"></a></li>
+        <li><a href="#"><img src="./assets/lang-ch.png" alt="lang-ch"></a></li>
+        <li><a href="#"><img src="./assets/lang-en.png" alt="lang-en"></a></li>
+      </ul>
+  
+      <form action="#" class="form">
+        <label class="form__label js-focus-visible">
+          <input type="text" name="поиск" class="input-reset form__input" placeholder="поиск">
+          <button type="button" class="btn-reset form__btn">
+            @@include('../../assets/search-icon.svg')
+          </button>
+        </label>
+      </form>
+    </div>
   </div>
 </header>

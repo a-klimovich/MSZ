@@ -9,6 +9,7 @@
 .page {
   height: 100%;
   font-family: 'Montserrat-Medium';
+  color: $gray-2;
 }
 
 .page__body {
@@ -64,6 +65,7 @@ a {
   border: none;
   border-radius: 0;
   background-color: #fff;
+  outline: none;
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,

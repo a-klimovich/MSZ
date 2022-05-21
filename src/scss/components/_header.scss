@@ -1,0 +1,208 @@
+$height-top: 82px;
+$height-bottom: 82px;
+
+.header {
+  width: 100%;
+  box-shadow: $box-shadow;
+  background-color: $white;
+  
+  &__wrapper {
+    @include flex-all-center;
+    width: 100%;
+    max-width: 1900px;
+    padding: 0 12px 0 0;
+    margin: 0 auto;
+  }
+
+  .logo {
+    border-right: 2px solid $gray-5;
+    padding: 17px 70px;
+
+    @media screen() {
+      
+    }
+
+    a {
+      width: 191px;
+      height: 136px;
+      display: block;
+    }
+  }
+
+  .menu-wrapper {
+    width: 100%;
+    max-width: 1239px;
+  }
+
+  .nav {
+    @include flex-v-center;
+    height: $height-top;
+    border-bottom: 2px solid $gray-5;
+    padding-left: 54px;
+
+    &__list {
+      @include flex-all-sb;
+      width: 100%;
+      height: 100%;
+
+      li a {
+        font-size: 22px;
+        line-height: 27px;
+        color: $black;
+      }
+
+      li {
+        @include flex-v-center;
+        height: 100%;
+
+        &:hover {
+          position: relative;
+  
+          &::after {
+            @include pseudo;
+            position: absolute;
+            bottom: -2px;
+            height: 2px;
+            background: $orange;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .drop-down__list {
+      display: none;
+    }
+  }
+
+  .short-info {
+    @include flex;
+    height: $height-bottom;
+    padding-left: 54px;
+    
+    .short-info-wrapper {
+      @include flex-all-sb;
+      width: 100%;
+    }
+
+    .link-action {
+      @include flex-all-center;
+      width: 100%;
+      max-width: 200px;
+      border-left: 2px solid $gray-5;
+      border-right: 2px solid $gray-5;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $orange;
+      padding: 0 16px 0 19px;
+
+      &.connect-with-us {
+        border-left: none;
+      }
+      
+      svg {
+        margin-right: 6px;
+
+        path {
+          fill: $orange;
+        }
+      }
+
+      @include hover {
+        background: $orange;
+        color: $white;
+
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &__item {
+      @include flex-v-center;
+      margin-right: 54px;
+
+      .icone {
+        width: 43px;
+        height: 41px;
+        @include mr(11px);
+      }
+
+      .info {
+        .title {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+          line-height: 17px;
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .lang-search-wrapper {
+    .language {
+      @include flex-v-center;
+      justify-content: flex-end;
+      height: $height-top;
+      border-bottom: 2px solid $gray-5;
+
+      li {
+        border-radius: 50%;
+        border: 1px solid transparent;
+
+        @include hover {
+          border: 1px solid $orange;
+        }
+
+        a {
+          @include flex-all-center;
+          @include mr(5px);
+          width: 37px;
+          height: 37px;
+          border: 2px solid $white;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .form {
+      @include flex-all-center;
+      height: $height-bottom;
+      
+      &__label {
+        padding-left: 20px;
+        position: relative;
+      }
+
+      &__input {
+        width: 100%;
+        height: 28px;
+        padding-left: 27px;
+        padding-right: 25px;
+        border: 1px solid #BDBDBD;
+
+        &::placeholder {
+          color: $gray-4;
+        }
+      }
+
+      &__btn {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-130%, -50%);
+
+        svg {
+          width: 18px;
+          height: 19px;
+        }
+      }
+    }
+  }
+}
