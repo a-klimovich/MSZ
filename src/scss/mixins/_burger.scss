@@ -1,16 +1,16 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
-  --burger-line-height: 2px;
+  --burger-width: 33px;
+  --burger-height: 25px;
+  --burger-line-height: 5px;
 
   position: relative;
   border: none;
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: #000;
+  color: #333333;
   background-color: transparent;
   cursor: pointer;
 
@@ -44,7 +44,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  &--active {
+  &__active {
     &::before {
       top: 50%;
       transform: rotate(45deg);

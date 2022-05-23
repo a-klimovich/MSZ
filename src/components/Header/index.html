@@ -1,5 +1,9 @@
 <header class="header">
   <div class="header__wrapper">
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
+
     <div class="logo">
       <a href="#">
         <img src="./assets/logo-main.png" alt="">
@@ -7,17 +11,22 @@
     </div>
   
     <div class="menu-wrapper">
-      <nav class="nav" title="">
+      <nav class="nav" id="headerNav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
             <a href="#" class="nav__link">
               Главная
             </a>
   
-            <ul class="drop-down__list list-reset">
-              <li><a href="#">link drow menu</a></li>
-              <li><a href="#">link drow menu</a></li>
-              <li><a href="#">link drow menu</a></li>
+            <ul class="drop-down-nav-item list-reset">
+              <li><a href="#">История</a></li>
+              <li><a href="#">Производство</a></li>
+              <li><a href="#">Миссия </a></li>
+              <li><a href="#">Политика</a></li>
+              <li><a href="#">Достижения</a></li>
+              <li><a href="#">Фотогалерея</a></li>
+              <li><a href="#">Видео</a></li>
+              <li><a href="#">Почему мы лучшие?</a></li>
             </ul>
           </li>
           
@@ -71,15 +80,21 @@
             'subtitle': '90% продукции',
           })
         </div>
+
+        <ul class="language list-reset">
+          <li><a href="#"><img src="./assets/lang-ru.png" alt="lang-ru"></a></li>
+          <li><a href="#"><img src="./assets/lang-ch.png" alt="lang-ch"></a></li>
+          <li><a href="#"><img src="./assets/lang-en.png" alt="lang-en"></a></li>
+        </ul>
   
         <a href="#" class="link-action download-prices">
           @@include('../../assets/download-icon.svg')
-          СКАЧАТЬ ПРАЙС
+          <span>СКАЧАТЬ ПРАЙС</span>
         </a>
   
         <a href="#" class="link-action connect-with-us">
           @@include('../../assets/email-icon.svg')
-          НАПИШИТЕ НАМ
+          <span>НАПИШИТЕ НАМ</span>
         </a>
       </div>
     </div>
@@ -100,5 +115,9 @@
         </label>
       </form>
     </div>
+
+    <button class="btn-reset submenu-header">
+      <span class="submenu-header__dots"></span>
+    </button>
   </div>
 </header>

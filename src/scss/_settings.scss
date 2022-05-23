@@ -8,6 +8,7 @@
 
 .page {
   height: 100%;
+  min-height: 120vh;
   font-family: 'Montserrat-Medium';
   color: $gray-2;
 }
@@ -88,6 +89,8 @@ a {
 
 .container {
   padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
 
 // 768px window width and more
@@ -98,8 +101,6 @@ a {
 
 // 992px window width and more
   @include lg {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 1200px;
   }
 
