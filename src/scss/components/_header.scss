@@ -8,9 +8,12 @@ $height-bottom: 82px;
 
   .burger {
     @include burger;
+    display: none;
   }
+
   .submenu-header {
     @include submenu-header;
+    display: none;
   }
 
   &__wrapper {
@@ -121,6 +124,10 @@ $height-bottom: 82px;
 
     &.open {
       display: flex;
+    }
+
+    .language {
+      display: none;
     }
 
     .short-info-wrapper {
@@ -294,6 +301,11 @@ $height-bottom: 82px;
 
     .burger {
       margin-right: 25px;
+      display: block;
+    }
+
+    .submenu-header {
+      display: block;
     }
 
     .lang-search-wrapper .language {

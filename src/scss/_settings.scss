@@ -8,7 +8,6 @@
 
 .page {
   height: 100%;
-  min-height: 120vh;
   font-family: 'Montserrat-Medium';
   color: $gray-2;
 }
@@ -41,6 +40,11 @@ img {
 
 a {
   text-decoration: none;
+  color: $black;
+
+  @include hover {
+    color: $orange;
+  }
 }
 
 .is-hidden {
