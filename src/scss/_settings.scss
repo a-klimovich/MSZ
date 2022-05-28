@@ -8,7 +8,7 @@
 
 .page {
   height: 100%;
-  font-family: 'Montserrat-Medium';
+  font-family: "Montserrat-Medium";
   color: $gray-2;
 }
 
@@ -58,6 +58,24 @@ a {
   cursor: pointer;
 }
 
+.btn-max {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 17px;
+  text-align: center;
+  width: 308px;
+  border: 3px solid $gray-2;
+  border-radius: 12px;
+  padding: 30px 0;
+  color: $gray-2;
+
+  @include hover {
+    background-color: $orange;
+    border-color: $orange;
+    color: $white;
+  }
+}
+
 .list-reset {
   list-style: none;
   margin: 0;
@@ -97,18 +115,18 @@ a {
   margin-right: auto;
   width: 100%;
 
-// 768px window width and more
+  // 768px window width and more
   @include md {
     padding: 0 34px;
     max-width: 768px;
   }
 
-// 992px window width and more
+  // 992px window width and more
   @include lg {
     max-width: 1200px;
   }
 
-// 1400px window width and more
+  // 1400px window width and more
   @include rwd(1200) {
     max-width: 1570px;
   }

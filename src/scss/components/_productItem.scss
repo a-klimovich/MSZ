@@ -1,0 +1,50 @@
+.product-item {
+  width: 100%;
+  max-width: 370px;
+
+  &__content {
+    display: flex;
+    padding: 8px 0;
+
+    @include md {
+      padding: 10px 0;
+    }
+
+    @include lg {
+      padding: 11px 0;
+    }
+
+    .icone {
+      margin-right: 22px;
+    }
+
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .title {
+        color: #333333;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 5px;
+
+        @include md {
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+
+      .subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        color: $orange;
+
+        @include md {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

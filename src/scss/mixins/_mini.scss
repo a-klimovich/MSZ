@@ -73,6 +73,12 @@ $browser-context: 16; // Default
   }
 }
 
+@mixin pr($value) {
+  &:not(:last-child) {
+    padding-right: $value;
+  }
+}
+
 @mixin pseudo() {
   content: "";
   display: block;

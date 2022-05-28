@@ -55,22 +55,22 @@
   }
 
   .wrapper__navigate {
-    background-image: url("../../assets/footer-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: left center;
+    background-image: url("../assets/footer-bg.jpg");
+    // background-repeat: no-repeat;
+    // background-position: left center;
     padding: 40px 0;
+    @include bg-cover;
 
     @media screen and (max-width: 768px) {
-      background-image: url("../../assets/footer-bg-sm.jpg");
-      background-position: center;
-      background-size: cover;
+      background-image: url("../assets/footer-bg-sm.jpg");
+      // background-position: center;
+      // background-size: cover;
     }
 
     .navigate {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-
 
       p {
         color: $white;
