@@ -47,6 +47,16 @@ a {
   }
 }
 
+hr {
+  border: 1px solid $gray-5;
+}
+
+.card {
+  background-color: $white;
+  border: 3px solid #bdbdbd;
+  border-radius: 12px;
+}
+
 .is-hidden {
   display: none !important;
 }
@@ -153,3 +163,4 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+

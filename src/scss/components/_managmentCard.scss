@@ -1,0 +1,67 @@
+.management-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 17px 16px;
+  width: 100%;
+  max-width: 381px;
+  height: 606px;
+  
+  @include md {
+    padding: 40px 22px 48px;
+    height: 697px;
+  }
+
+  &__img {
+    height: 338px;
+    overflow: hidden;
+    margin-bottom: 3px;
+
+    @include md {
+      height: 367px;
+      margin-bottom: 19px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    color: $gray-2;
+    margin-bottom: 2px;
+
+    @include md {
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__job-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #F2994A;
+    margin-bottom: 6px;
+  }
+
+  &__about {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: $gray-2;
+    padding-bottom: 6px;
+    margin-bottom: auto;
+  }
+
+  hr {
+    @include mb(6px);
+    border: 1px solid #E0E0E0;
+  }
+}

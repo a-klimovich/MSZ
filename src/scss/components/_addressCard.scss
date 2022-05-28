@@ -1,0 +1,46 @@
+.address-card {
+  width: 100%;
+  max-width: 356px;
+  height: 652px;
+  padding: 18px 15px 16px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $gray-2;
+
+    margin-bottom: 8px;
+  }
+
+  &__address {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $orange;
+    letter-spacing: -0.02em;
+
+    padding: 14px 0 20px;
+  }
+
+  &__img {
+    height: 231.07px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    height: 231.07px;
+    background: #ccc;
+  }
+
+  hr {
+    margin-bottom: 8px;
+  }
+}

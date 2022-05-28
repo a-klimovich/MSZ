@@ -39,5 +39,29 @@ $(document).ready(function () {
 
     // SLIDER
     $(".your-class").slick({});
+
+    // MAP
+    /*/
+      if ($('#map').length) {
+      ymaps.ready(init);
+    
+      function init(){
+        const myLocation = [53.884328, 27.532366];
+    
+        myMap = new ymaps.Map("map", {
+          center: myLocation,
+          zoom: 16
+        }),
+    
+        myPlacemark = new ymaps.Placemark(myLocation, {}, {
+          preset: 'islands#greenIcon'
+        });
+    
+        myMap.geoObjects.add(myPlacemark);
+      }
+    }
+    */
+
+    
   })();
 });

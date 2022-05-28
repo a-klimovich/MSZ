@@ -5,6 +5,7 @@ $height-bottom: 82px;
   width: 100%;
   box-shadow: $box-shadow;
   background-color: $white;
+  z-index: 1;
 
   .burger {
     @include burger;
