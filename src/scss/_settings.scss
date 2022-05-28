@@ -57,6 +57,12 @@ hr {
   border-radius: 12px;
 }
 
+.card-shadow {
+  background-color: $white;
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 22px;
+}
+
 .is-hidden {
   display: none !important;
 }
@@ -163,4 +169,3 @@ hr {
 .page--ios .dis-scroll {
   position: relative;
 }
-

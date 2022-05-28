@@ -1,6 +1,11 @@
 $(document).ready(function () {
   (function () {
     window.onscroll = () => scrollFunction();
+    // Base
+    const cssClassActive = "active";
+    const cssClassOpen = "open";
+    const cssClassIsHidden = "is-hidden";
+
     // Node's
     const $headerNav = $("#headerNav");
     const $burger = $(".burger");
@@ -22,19 +27,28 @@ $(document).ready(function () {
 
     // Header menu controllers
     $burger.on("click", () => {
-      if ($shortInfo.hasClass("open")) {
-        $shortInfo.toggleClass("open");
+      if ($shortInfo.hasClass(cssClassOpen)) {
+        $shortInfo.toggleClass(cssClassOpen);
       }
       $burger.toggleClass("burger__active");
-      $headerNav.toggleClass("open");
+      $headerNav.toggleClass(cssClassOpen);
     });
 
     $submenuHeaderBtn.on("click", () => {
       if ($burger.hasClass("burger__active")) {
         $burger.toggleClass("burger__active");
-        $headerNav.toggleClass("open");
+        $headerNav.toggleClass(cssClassOpen);
       }
-      $shortInfo.toggleClass("open");
+      $shortInfo.toggleClass(cssClassOpen);
+    });
+
+    // card open
+    const btnOpenAnswer = $("#btnOpenAnswer");
+    const contentAnswer = $(".content__answer");
+
+    btnOpenAnswer.on("click", () => {
+      btnOpenAnswer.toggleClass(cssClassActive);
+      contentAnswer.toggleClass(cssClassIsHidden);
     });
 
     // SLIDER
@@ -61,7 +75,5 @@ $(document).ready(function () {
       }
     }
     */
-
-    
   })();
 });
