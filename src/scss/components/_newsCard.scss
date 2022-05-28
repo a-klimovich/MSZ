@@ -1,0 +1,51 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  padding: 29px 24px 23px;
+  border: 3px solid #bdbdbd;
+  border-radius: 12px;
+  background-color: $white;
+  max-width: 377px;
+  height: 456px;
+  cursor: pointer;
+  
+  &__img {
+    height: 272px;
+    overflow: hidden;
+    margin-bottom: 11px;
+
+    img {
+      height: 100%;
+      transition: all 0.3s;
+    }
+  }
+
+  &__title {
+    @include clampLine(3);
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    margin-bottom: auto;
+    color: $gray-2;
+  }
+
+  &__date {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: $orange;
+  }
+}
+
+.news-card-link {
+  @include hover {
+    .news-card__img {
+      img {
+        height: 102%;
+      }
+    }
+    .news-card__title {
+      color: $orange;
+    }
+  }
+}
