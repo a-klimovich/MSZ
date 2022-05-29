@@ -1,0 +1,66 @@
+.section-menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include md {
+      justify-content: flex-start;
+    }
+    @include xl {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #c4c4c4;
+    margin-bottom: 10px;
+    
+    @include without-last {
+      margin-right: 10px;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: $black;
+
+      &:hover {
+        color: $black !important;
+      }
+
+      @include md {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    @include sm {
+      @include without-last {
+        margin-right: 20px;
+      }
+    }
+
+    @include md {
+      @include without-last {
+        margin-right: 40px;
+      }
+    }
+
+    @include xl {
+      width: 100%;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include hover {
+      border-color: #F2994A;
+    }
+  }
+}

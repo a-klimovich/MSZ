@@ -79,6 +79,12 @@ $browser-context: 16; // Default
   }
 }
 
+@mixin without-last() {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
 @mixin pseudo() {
   content: "";
   display: block;

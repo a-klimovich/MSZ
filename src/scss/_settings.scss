@@ -125,6 +125,10 @@ hr {
   clip: rect(0 0 0 0);
 }
 
+.fluid-wrapper {
+  width: 100%;
+}
+
 .container {
   padding: 0 10px;
   margin-left: auto;
@@ -168,4 +172,8 @@ hr {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.bg-gray-6 {
+  background-color: $gray-6;
 }
