@@ -1,0 +1,25 @@
+.contact-card {
+  padding: 22px;
+  text-align: center;
+
+  &__job-title {
+    padding-bottom: 15px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: $orange;
+  }
+
+  &__name {
+    padding: 15px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__contact {
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
