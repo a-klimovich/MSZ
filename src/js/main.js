@@ -51,6 +51,25 @@ $(document).ready(function () {
       contentAnswer.toggleClass(cssClassIsHidden);
     });
 
+    // PRODUCT CARD LIST ITEM COUNTER
+    const $productListCard = $('.production-list-card');
+
+    $productListCard.each((i, elem)  => {
+      const listLength = $('.list-menu li', elem).length;
+      const $counterNode = $('.counter', elem);
+
+      $(elem).on('click', () => {
+        $(elem).toggleClass(cssClassActive)
+      })
+
+      if (listLength === 0) {
+        $('.list-menu', elem).remove()
+        $('.list-item-counter', elem).remove()
+      }
+
+      $counterNode[0].innerHTML = `${listLength}`;
+    })
+
     // SLIDER
     $(".your-class").slick({});
 

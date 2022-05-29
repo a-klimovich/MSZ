@@ -40,10 +40,10 @@ img {
 
 a {
   text-decoration: none;
-  color: $black;
+  color: $gray-2;
 
   @include hover {
-    color: $orange;
+    color: $orange !important;
   }
 }
 
