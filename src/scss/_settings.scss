@@ -127,6 +127,14 @@ hr {
 
 .fluid-wrapper {
   width: 100%;
+
+  .container {
+    padding: 0;
+    
+    @include md {
+      padding: 0 34px;
+    }
+  }
 }
 
 .container {

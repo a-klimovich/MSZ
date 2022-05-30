@@ -71,28 +71,65 @@ $(document).ready(function () {
     })
 
     // SLIDER
-    $(".your-class").slick({});
+    $("#mainSlider").slick({
+      slidesToShow: 1,
+      arrows: false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            dots: false,
+            arrows: false,
+            slidesToShow: 1
+          }
+        },
+      ]
+    });
 
-    // MAP
-    /*/
-      if ($('#map').length) {
-      ymaps.ready(init);
-    
-      function init(){
-        const myLocation = [53.884328, 27.532366];
-    
-        myMap = new ymaps.Map("map", {
-          center: myLocation,
-          zoom: 16
-        }),
-    
-        myPlacemark = new ymaps.Placemark(myLocation, {}, {
-          preset: 'islands#greenIcon'
-        });
-    
-        myMap.geoObjects.add(myPlacemark);
-      }
-    }
-    */
+    $("#logoSlider").slick({
+      slidesToShow: 5,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            dots: true,
+            arrows: false,
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            dots: true,
+            arrows: false,
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 685,
+          settings: {
+            dots: true,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 520,
+          settings: {
+            dots: true,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '20px',
+            slidesToShow: 1,
+          }
+        },
+      ]
+    });
+
+
   })();
 });
