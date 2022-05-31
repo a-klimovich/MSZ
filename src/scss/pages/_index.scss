@@ -186,5 +186,90 @@
     }
   }
 
-  
+  .managment-stuff {
+    padding-top: 33px;
+    padding-bottom: 61px;
+
+    @include md {
+      padding-top: 42px;
+      padding-bottom: 115px;
+    }
+
+    @include lg {
+      padding-top: 49px;
+      padding-bottom: 120px;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 34px;
+
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .charity {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    &__text {
+      color: $gray-1;
+    }
+
+    &__img-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+
+      img {
+        @include mb(44px);
+        max-width: 305px;
+        max-height: 230px;
+      }
+    }
+
+    @include md {
+      padding-top: 25px;
+      padding-bottom: 38px;
+
+      &__img-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 38px;
+
+        img {
+          @include mr(24px);
+          @include mb(0);
+        }
+      }
+    }
+
+    @include lg {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 40px;
+      padding-bottom: 45px;
+
+      &__img-wrapper {
+        justify-content: space-around;
+        margin-bottom: 0;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      &__text {
+        max-width: 420px;
+      }
+    }
+  }
 }

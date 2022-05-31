@@ -151,6 +151,7 @@ hr {
 
   // 992px window width and more
   @include lg {
+    padding: 0 0px;
     max-width: 1200px;
   }
 }

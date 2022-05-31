@@ -245,16 +245,94 @@
           </section>
         </div>
       </div>
-    </main>
 
-    
-    
-
-    <div class="fluid-wrapper bg-gray-6">
       <div class="container">
-        @@include('../components/SocialBar/index.html')
+        <div class="managment-stuff">
+          <h2 class="centered">РУКОВОДЯЩИЙ СОСТАВ</h2>
+  
+          <div id="managmentStuff">
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms1.jpg',
+                  'name': 'Чиботарь Руслан Иванович',
+                  'title': 'Директор',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms2.jpg',
+                  'name': 'Токарь Николай Николаевич',
+                  'title': 'Первый заместитель директора',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms3.jpg',
+                  'name': 'Грень Эдуард Иванович',
+                  'title': 'Главный инженер',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms1.jpg',
+                  'name': 'Чиботарь Руслан Иванович',
+                  'title': 'Директор',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms2.jpg',
+                  'name': 'Токарь Николай Николаевич',
+                  'title': 'Первый заместитель директора',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                @@include('../components/Management/index.html', {
+                  'image': '../../assets/img/ms3.jpg',
+                  'name': 'Грень Эдуард Иванович',
+                  'title': 'Главный инженер',
+                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
+                })
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div class="bg-gray-6">
+        <div class="container">
+          <div class="charity">
+            <p class="charity__text centered">
+              Программа мероприятий по реализации 
+              профилактического проекта "Кобринский район - 
+              территория здоровья" на 2020 - 2025г.
+            </p>
+
+            <div class="charity__img-wrapper">
+              <img src="../assets/char-1.png" alt="charity image logo">
+              <img src="../assets/char-2.png" alt="charity image logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
     @@include('../components/Footer/index.html')
   </div>
 </body>

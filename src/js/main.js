@@ -145,5 +145,29 @@ $(document).ready(function () {
         },
       ]
     });
+    
+    $("#managmentStuff").slick({
+      slidesToShow: 3,
+      dots: true,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            dots: true,
+            arrows: false,
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            dots: true,
+            arrows: false,
+            slidesToShow: 1,
+          }
+        },
+      ]
+    });
   })();
 });
