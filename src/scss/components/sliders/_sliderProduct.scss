@@ -1,0 +1,69 @@
+#sliderProduct {
+  .slide {
+    &__img {
+      margin-bottom: 38px;
+      
+      @include md {
+        margin-bottom: 18px;
+      }
+    }
+
+    h4 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $orange;
+      margin-bottom: 29px;
+
+      @include md {
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 14px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: $gray-5;
+
+      @include md {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.fluid-wrapper.bg-slider-logo-1 {
+  @include image-set("../../assets/img/slider-newest-product-sm");
+  @include bg-cover;
+  padding-top: 32px;
+  padding-bottom: 92px;
+
+  h2 {
+    margin-bottom: 62px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $white;
+
+    @include md {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    @include md {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  @include md {
+    @include image-set("../../assets/img/slider-newest-product-md");
+    padding-top: 62px;
+    padding-bottom: 144px;
+  }
+  @include lg {
+    @include image-set("../../assets/img/slider-newest-product-lg");
+  }
+}

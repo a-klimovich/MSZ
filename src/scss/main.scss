@@ -4,8 +4,12 @@
 @import "fonts";
 @import "settings";
 
-// components
+// PAGES
+@import './pages/main';
+
+// SLIDER BASE
+@import "slick-theme";
+
+// COMPONENT
 @import "./components/main";
 
-// slick slider base
-@import "slick-theme";

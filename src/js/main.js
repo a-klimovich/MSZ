@@ -130,6 +130,20 @@ $(document).ready(function () {
       ]
     });
 
-
+    $("#sliderProduct").slick({
+      slidesToShow: 2,
+      dots: true,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 980,
+          settings: {
+            dots: true,
+            arrows: false,
+            slidesToShow: 1,
+          }
+        },
+      ]
+    });
   })();
 });
