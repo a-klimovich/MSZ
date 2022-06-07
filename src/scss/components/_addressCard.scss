@@ -13,16 +13,22 @@
     color: $gray-2;
 
     margin-bottom: 8px;
+    @include flex-all-center;
+    height: 56px;
+    overflow: hidden;
   }
 
   &__address {
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     color: $orange;
     letter-spacing: -0.02em;
-
-    padding: 14px 0 20px;
   }
 
   &__img {
@@ -32,11 +38,12 @@
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
 
   &__map {
-    height: 231.07px;
+    height: 223.07px;
     background: #ccc;
   }
 

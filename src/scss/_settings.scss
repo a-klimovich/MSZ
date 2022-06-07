@@ -51,6 +51,26 @@ hr {
   border: 1px solid $gray-5;
 }
 
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-7 {
+  margin-bottom: 70px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.pt-6 {
+  padding-top: 60px;
+}
+
+.pr-9 {
+  padding-right: 89.8px;
+}
+
 .card {
   background-color: $white;
   border: 3px solid #bdbdbd;
@@ -156,6 +176,30 @@ hr {
   }
 }
 
+.custom-container-1570 {
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  // 768px window width and more
+  @include md {
+    padding: 0 34px;
+    max-width: 768px;
+  }
+
+  // 992px window width and more
+  @include lg {
+    padding: 0 0px;
+    max-width: 1200px;
+  }
+
+  @include xl {
+    padding: 0 0px;
+    max-width: 1570px;
+  }
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
@@ -187,4 +231,19 @@ hr {
 }
 .color-orange {
   color: $white;
+}
+
+// TODO: не нужен row переписать на divader -- content + nav
+.row {
+  display: flex;
+  flex-direction: column;
+  
+  [class="col"] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include md {
+    flex-direction: row;
+  }
 }

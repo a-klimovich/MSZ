@@ -1,4 +1,6 @@
 .section-menu {
+  min-width: 341px;
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -13,15 +15,22 @@
   }
 
   &__item {
-    padding-bottom: 7px;
     border-bottom: 2px solid #c4c4c4;
     margin-bottom: 10px;
+    
+    &:first-child {
+      border-top: 2px solid #c4c4c4;
+    }
     
     @include without-last {
       margin-right: 10px;
     }
-
+    
     a {
+      display: inline-flex;
+      height: 100%;
+      padding: 20px 0;
+      width: 100%;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
@@ -33,6 +42,10 @@
 
       @include md {
         font-size: 18px;
+        line-height: 22px;
+      }
+      @include lg {
+        font-size: 22px;
         line-height: 22px;
       }
     }
@@ -60,7 +73,7 @@
     }
 
     @include hover {
-      border-color: #F2994A;
+      border-bottom-color: #F2994A;
     }
   }
 }
