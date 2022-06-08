@@ -1,17 +1,17 @@
 <div class="questions-card card_shadow">
   <div class="content">
     <p class="content__question">
-      Здравствуйте! Подскажите, пожалуйста, из каких компонентов изготавливается ваше мягкое мороженое в рожке?
+      @@question
     </p>
 
-    <span>Владимир, РФ.</span>
+    <p class="user-info"><span>@@userName</span>, <span>@@country</span>.</p>
 
     <p class="content__answer is-hidden">
-      Добрый день. Будем рады видеть Вас в числе своих покупателей. Адрес: Фирменный павильон "Кобринские сыры" г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")
+      @@answer
     </p>
   </div>
 
-  <button type="button" class="btn-reset btn-arrow" id="btnOpenAnswer">
+  <button type="button" class="btn-reset btn-arrow btnOpenAnswer">
     @@include('../../assets/arrow.svg')
   </button>
 </div>

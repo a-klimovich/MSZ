@@ -32,19 +32,22 @@
     color: $orange;
     border-color: $orange;
   }
-
-  &__prev {
+  
+  &__next, &__prev {
     svg {
       width: 24px;
       height: 18px;
+    
+      & path {
+        fill: $gray-3;
+      }
+    }
+  }
+
+  &__prev {
+    svg {
       transform: rotate(180deg);
     }
   }
 
-  &__next {
-    svg {
-      width: 24px;
-      height: 18px;
-    }
-  }
 }
