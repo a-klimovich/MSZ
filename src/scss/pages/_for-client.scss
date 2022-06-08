@@ -1,16 +1,32 @@
 .for-client {
   &__content {
-    margin-bottom: 54px;
+   margin-bottom: 1rem;
 
     .title {
       font-weight: 500;
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 24px;
+      line-height: 29px;
+
       color: $black;
       margin-bottom: 28px;
+
+      @include md {
+        font-size: 36px;
+        line-height: 44px;
+      }
     }
 
     .text {
+      margin-bottom: 54px;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include md {
+        line-height: 22px;
+      }
+    }
+
+    @include lg {
       margin-bottom: 54px;
     }
   }
@@ -19,15 +35,14 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    gap: 0 8px;
+    row-gap: 16px;
 
     @include md {
       grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     @include xl {
-      gap: 18px;
       grid-template-columns: repeat(3, 1fr);
     }
   }

@@ -1,5 +1,7 @@
 .section-menu {
-  min-width: 341px;
+  @include lg {
+    min-width: 341px;
+  }
 
   &__list {
     display: flex;
@@ -19,17 +21,22 @@
     margin-bottom: 10px;
     
     &:first-child {
-      border-top: 2px solid #c4c4c4;
+      
+      @include xl {
+        border-top: 2px solid #c4c4c4;
+      }
     }
     
     @include without-last {
-      margin-right: 10px;
+      @include lg {
+        margin-right: 10px;
+      }
     }
     
     a {
       display: inline-flex;
       height: 100%;
-      padding: 20px 0;
+      padding: 10px 0;
       width: 100%;
       font-weight: 500;
       font-size: 14px;
@@ -44,9 +51,11 @@
         font-size: 18px;
         line-height: 22px;
       }
+
       @include lg {
         font-size: 22px;
         line-height: 22px;
+        padding: 20px 0;
       }
     }
 
