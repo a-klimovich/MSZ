@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  @@include('../partials/head.html')
+<body class="page__body">
+  <div class="main-wrapper news">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="news__grid">
+          @@include('../components/NewsCard/index.html', {
+            'image': '../assets/img/product-1.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': '../assets/img/product-1.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': '../assets/img/product-1.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': '../assets/img/product-1.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+        </div>
+
+        @@include('../components/Pagination/index.html')
+
+        <div class="divider"></div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../partials/includes.html')
+</html>
