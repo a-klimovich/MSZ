@@ -3,7 +3,71 @@
 
 @@include('../partials/head.html')
 
-<body>
-    
+<body class="page__body">
+	<div class="main-wrapper gran-pri-page">
+		@@include('../components/Header/index.html')
+	
+		<h1 class="container"> добавить компонент новости</h1>
+		@@include('../components/Breadcrumbs/index.html')
+
+		<div class="main">
+			<div class="container gran-pri">
+				<h4 class="gran-pri__title">Гран При конкурса "Лучшая продукция года - 2021"!</h4>
+				<p class="gran-pri__date">Июнь 28, 2019</p>
+				<p class="gran-pri__text gran-pri__text-before">Кобринский маслодельно-сыродельный 
+					завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!<br><br>
+					9 ноября состоялась церемония награждения Победителей Конкурса «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», 
+					по результатам которого предприятие было удостоено Дипломами победителя в следующих номинациях:<br><br>
+					"Мороженое" за "Пломбир на сливках" в вафельном стакане, 12%<br><br>
+					"Сыры сычужные" за сыры  "Арамель с пажитником" 50% и "МонБлан. Старый Утес" 50%<br><br>
+					"Масло сливочное" за масло сладкосливочное несоленое 82,5%<br><br>
+					"Майонез" за "Провансаль кобринский" 51%.
+					</p>
+					<img src="../assets/img/gran-pri_veras.png" alt="image: market" class="gran-pri__img-market">
+					<p class="gran-pri__text gran-pri__text-after">
+						Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – 
+						Гран-При за стабильное качество продукции!<br><br>
+						9 ноября состоялась церемония награждения Победителей Конкурса 
+						«ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам которого предприятие было удостоено Дипломами победителя в следующих номинациях:
+					</p>
+			</div>
+			<div class="container"> 
+				<div class="gran-pri__map">
+					<div style="position:relative;overflow:hidden;">
+						<a href="https://yandex.by/maps/26010/kobrin/?utm_medium=mapframe&utm_source=maps" 
+						style="color:#eee;font-size:12px;position:absolute;top:0px;">Кобрин</a>
+						<a href="https://yandex.by/maps/26010/kobrin/house/Zk0YdQVnT0ADQFtofX5wc3VnYg==/?ll=24.327947%2C52.213135&utm_medium=mapframe&utm_source=maps&z=17.75" style="color:#eee;font-size:12px;position:absolute;top:14px;">Советская улица, 128к22 — Яндекс Карты</a>
+						<iframe src="https://yandex.by/map-widget/v1/-/CCUJJVEW2A" 
+						width="1569" height="526" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="fluid-wrapper bg-gray-6">
+				<div class="container">
+					@@include('../components/SocialBar/index.html')
+				</div>
+			</div>
+
+			<div class="container">
+
+				<div class="arrow"> 
+					<div class="arrow-left">
+						<img src="../assets/arrow-left.svg" alt="icon: arrow left" class="icon-arrow-left">
+						<p class="arrow-text"> предыдущая новость</p>
+					</div>
+					<div class="arrow-right">
+						<p class="arrow-text"> следующая новость</p>
+						<img src="../assets/arrow-right.svg" alt="icon: arrow rigth" class="icon-arrow-right">
+					</div>
+				</div>
+
+			</div>
+
+
+		@@include('../components/Footer/index.html')
+	</div>
 </body>
+
 </html>

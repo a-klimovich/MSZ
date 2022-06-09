@@ -8,4 +8,4 @@ Node 16+
 - npm
   - install / i
   - start
-  - run build
+  - run bunpm startild
