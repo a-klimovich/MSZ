@@ -6,12 +6,17 @@
 <body class="page__body">
 	<div class="main-wrapper gran-pri-page">
 		@@include('../components/Header/index.html')
-	
-		<h1 class="container"> добавить компонент новости</h1>
+
+		@@include('../components/HeaderTitle/index.html', {
+			'image': '../assets/img/news.jpg',
+			'title': 'НОВОСТИ'
+		})
+
+
 		@@include('../components/Breadcrumbs/index.html')
 
-		<div class="main">
-			<div class="container">
+		<main class="main">
+			<div class="container container-xl">
 				<div class="gran-pri">
 					<h4 class="gran-pri__title">Гран При конкурса "Лучшая продукция года - 2021"!</h4>
 					<p class="gran-pri__date">Июнь 28, 2019</p>
@@ -24,7 +29,7 @@
 						"Масло сливочное" за масло сладкосливочное несоленое 82,5%<br><br>
 						"Майонез" за "Провансаль кобринский" 51%.
 					</p>
-					<img src="../assets/img/gran-pri_veras.png" alt="image: market" class="gran-pri__img-market">
+					<img src="../assets/img/gran-pri__veras.jpg" alt="image: market" class="gran-pri__img-market">
 					<p class="gran-pri__text gran-pri__text-after">
 						Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – 
 						Гран-При за стабильное качество продукции!<br><br>
@@ -45,13 +50,16 @@
 			</div>
 
 			<div class="fluid-wrapper bg-gray-6">
-				<div class="container">
+				<div class="container container-xl">
 					@@include('../components/SocialBar/index.html')
 				</div>
 			</div>
+
 			@@include('../components/ArrowNew/index.html')
-			@@include('../components/Footer/index.html')
-		</div>
+
+		</main>
+
+		@@include('../components/Footer/index.html')
 	</div>
 </body>
 
