@@ -1,0 +1,18 @@
+.arrow-new {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 55px;
+  padding-bottom: 65px;
+  font-size: 18px;
+  .arrow-text {
+    margin: 0 8px;
+  }
+  .arrow-left,.arrow-right {
+    align-items: center;
+    display: flex;
+  }
+  .icon-arrow-left,.icon-arrow-right {
+    align-items: center;
+    display: flex;
+  }
+}
