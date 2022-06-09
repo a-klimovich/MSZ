@@ -43,13 +43,17 @@ $(document).ready(function () {
     });
 
     // card open
-    const btnOpenAnswer = $("#btnOpenAnswer");
-    const contentAnswer = $(".content__answer");
-
-    btnOpenAnswer.on("click", () => {
-      btnOpenAnswer.toggleClass(cssClassActive);
-      contentAnswer.toggleClass(cssClassIsHidden);
-    });
+    const questionsCard = $(".questions-card")
+    
+    questionsCard.each((i, elem) => {
+      const btnOpenAnswer = $(".btnOpenAnswer", elem);
+      const contentAnswer = $(".content__answer", elem);
+      
+      btnOpenAnswer.on("click", () => {
+        btnOpenAnswer.toggleClass(cssClassActive);
+        contentAnswer.toggleClass(cssClassIsHidden);
+      });
+    })
 
     // PRODUCT CARD LIST ITEM COUNTER
     const $productListCard = $('.production-list-card');
@@ -70,7 +74,7 @@ $(document).ready(function () {
       $counterNode[0].innerHTML = `${listLength}`;
     })
 
-    // SLIDER
+    // SLIDERS
     $("#mainSlider").slick({
       slidesToShow: 1,
       arrows: false,

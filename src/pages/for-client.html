@@ -8,15 +8,18 @@
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
-      <!-- TODO: переписать customm-container сделат ьcontainer-/ container-lg (max-width: 1570px) -->
-      <div class="custom-container-1570">
-        <div class="row pt-6 mb-7">
-          <div class="col pr-9">
+      <div class="container container--xl">
+        <div class="layout">
+          <div class="layout__content">
             <div class="for-client__content">
-              <h3 class="title">КЛИЕНТАМ</h3>
+              <h3 class="title">
+                КЛИЕНТАМ
+              </h3>
+
               <div class="text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti suscipit sed, asperiores alias iure perspiciatis vitae culpa aliquid error incidunt, eveniet temporibus nihil consectetur numquam esse enim neque inventore?
               </div>
+
               <div class="image-wrapper mb-7">
                 <img src="../assets/img/product-1.jpg" alt="content image">
                 <img src="../assets/img/product-1.jpg" alt="content image">
@@ -26,14 +29,27 @@
               </div>
             </div>
           </div>
-          <div class="col pt-2">
+
+          <div class="layout__nav pt-2">
             @@include('../components/SectionMenu/index.html')
           </div>
         </div>
+
+        <a class="download-doc">
+          <span></span>
+
+        </a>
+
+        <a href="#" download>
+          <span class="">^-^</span>
+          СКАЧАТЬ ДОКУМЕНТАЦИЮ
+        </a>
       </div>
     </main>
 
     @@include('../components/Footer/index.html')
   </div>
 </body>
+
+@@include('../partials/includes.html')
 </html>
