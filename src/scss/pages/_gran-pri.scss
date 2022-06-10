@@ -1,5 +1,6 @@
 .container-xl {
   max-width: 1570px;
+  padding: 0;
 }
 .gran-pri-page {
   .gran-pri {
@@ -20,7 +21,7 @@
     &__text {
       font-size: 24px;
       color: #4F4F4F;
-      width: 1570px;
+      max-width: 1570px;
     }
     &__text-before {
       margin-bottom: 45px;
@@ -31,10 +32,17 @@
     }
     &__img-market {
       max-width: 1570px;
+      width: 1570px;
     }
     &__map {
       margin-bottom: 62px;
-
     }
   }
+  .fluid-wrapper {
+    .container-xl {
+      max-width: 1570px;
+      padding: 0;
+    }
+  }
+
 }
