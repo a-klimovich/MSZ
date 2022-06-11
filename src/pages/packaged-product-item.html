@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper packaged-product-item">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="packaged-product-item__grid-layout">
+          <div class="is-hidden">
+            <h2 class="title">СЫР "СОЛНЕЧНЫЙ" 50% ФАСОВАННЫЙ СЕГМЕНТ</h2>
+            <p class="product-code">Код продукта: 730</p>
+          </div>
+          
+          <div class="grid-layout-col grid-layout-col--first">
+            <div class="image">
+              <img src="../assets/img/slider-newest-product-md.jpg" alt="product">
+              <button type="button" class="btn btn-reset btnZoomImage">
+                @@include('../assets/search-icon.svg')
+              </button>
+            </div>
+
+            <div class="table">
+              @@loop('../partials/table-row.html', [
+                { "image": "../assets/products-icons/Products_icon_1.png", "title": "Жирность:", "text": "50%" },
+                { "image": "../assets/products-icons/Products_icon_2.png", "title": "Вес:", "text": "200-300г." },
+                { "image": "../assets/products-icons/Products_icon_3.png", "title": "Упаковка:", "text": "Полимерная пленка, в газовой среде" },
+                { "image": "../assets/products-icons/Products_icon_4.png", "title": "Срок годности:", "text": "210 суток" },
+                { "image": "../assets/products-icons/Products_icon_5.png", "title": "Количество в тарном месте:", "text": "16 шт." },
+                { "image": "../assets/products-icons/Products_icon_6.png", "title": "Количество ящиков на полете:", "text": "210 шт." }
+              ])
+            </div>
+          </div>
+
+          <div class="grid-layout-col grid-layout-col--second">
+            <div class="wrap">
+              <h2 class="title">СЫР "СОЛНЕЧНЫЙ" 50% ФАСОВАННЫЙ СЕГМЕНТ</h2>
+              <p class="product-code">Код продукта: 730</p>
+
+              <p class="text">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="social-box-wrapper">
+              @@include('../components/SocialBar/index.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>
