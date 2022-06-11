@@ -15,4 +15,7 @@
     align-items: center;
     display: flex;
   }
+  .icon-arrow-left {
+    transform: rotate(180deg);
+  }
 }

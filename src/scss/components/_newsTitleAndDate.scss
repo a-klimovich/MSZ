@@ -6,7 +6,16 @@
     font-size: 24px;
     line-height: 29px;
     color: $black;
+    margin-top: 6px;
     margin-bottom: 18px;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 40px;
+    }
   }
 
   &__date {
@@ -16,5 +25,13 @@
     text-align: right;
     letter-spacing: -0.02em;
     color: $orange;
+    font-style: italic;
+
+    @include md {
+      text-align: left;
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
+
 }

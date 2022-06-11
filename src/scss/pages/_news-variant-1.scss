@@ -1,16 +1,12 @@
-.container-xl {
-  max-width: 1570px;
-  padding: 0;
-}
+
 .gran-pri-page {
   .gran-pri {
     &__title {
-      color: black;
+      color: $black;
       font-size: 36px;
       margin-top: 40px;
       margin-bottom: 40px;
       font-weight: 500;
-
     }
     &__date {
       color:  $orange;
@@ -20,7 +16,7 @@
     }
     &__text {
       font-size: 24px;
-      color: #4F4F4F;
+      color: $gray-2;
       max-width: 1570px;
     }
     &__text-before {
@@ -30,19 +26,8 @@
       margin-top: 40px;
       margin-bottom: 55px;
     }
-    &__img-market {
-      max-width: 1570px;
-      width: 1570px;
-    }
     &__map {
       margin-bottom: 62px;
     }
   }
-  .fluid-wrapper {
-    .container-xl {
-      max-width: 1570px;
-      padding: 0;
-    }
-  }
-
 }
