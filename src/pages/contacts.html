@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper for-client">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <section class="department-contacts">
+          <p class="department-contacts__title"></p>
+
+          <div class="department-contacts__grid">
+            @@include('../components/ContactItem/index.html')
+            @@include('../components/ContactItem/index.html')
+            @@include('../components/ContactItem/index.html')
+          </div>
+        </section>
+        <section class="department-contacts"></section>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>
