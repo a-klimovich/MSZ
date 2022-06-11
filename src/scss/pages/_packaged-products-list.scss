@@ -1,0 +1,32 @@
+.packaged-products-list-page {
+  &__content-wrapper {
+    padding: 9px 0 47px;
+
+    @include md {
+      padding: 35px 0 41px;
+    }
+    
+    @include xl {
+      padding: 40px 0 80px;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    gap: 14px 0;
+    margin-bottom: 28px;
+    
+    
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px 24px;
+      margin-bottom: 40px;
+    }
+    
+    @include xl {
+      gap: 14px 36px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 54px;
+    }
+  }
+}

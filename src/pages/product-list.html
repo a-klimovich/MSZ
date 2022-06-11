@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
-  @@include('../utils/head.html')
+@@include('../utils/head.html')
+
 <body class="page__body">
-  <div class="main-wrapper achievements">
+  <div class="main-wrapper product-list-page product-list-page__variant-1">
     @@include('../components/Header/index.html')
-  
+
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
-        <div class="layout">
-          <div class="layout__content">
-            
-          </div>
-
-          <div class="layout__nav pt-2">
-            @@include('../components/SectionMenu/index.html')
-          </div>
+        <div class="product-list-page__grid">
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
         </div>
       </div>
     </main>
@@ -26,4 +22,5 @@
 </body>
 
 @@include('../utils/includes.html')
+
 </html>

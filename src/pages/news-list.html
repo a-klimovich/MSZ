@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
-  @@include('../partials/head.html')
+  @@include('../utils/head.html')
 <body class="page__body">
-  <div class="main-wrapper news">
+  <div class="main-wrapper news-list">
     @@include('../components/Header/index.html')
   
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
-        <div class="news__grid">
+        <div class="news-list__grid">
           @@include('../components/NewsCard/index.html', {
             'image': '../assets/img/product-1.jpg',
             'title': 'Гран При конкурса "Лучшая продукция года - 2021',
@@ -46,5 +46,5 @@
   </div>
 </body>
 
-@@include('../partials/includes.html')
+@@include('../utils/includes.html')
 </html>
