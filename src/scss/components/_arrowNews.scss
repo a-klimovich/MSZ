@@ -1,15 +1,30 @@
 .arrow-new {
   display: flex;
-  justify-content: space-between;
-  padding-top: 55px;
-  padding-bottom: 65px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 26px;
   font-size: 18px;
+  line-height: 21px;
+
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
   .arrow-text {
     margin: 0 8px;
+    
+    @include md {
+      margin-bottom: 0;
+    }
   }
   .arrow-left,.arrow-right {
     align-items: center;
     display: flex;
+    margin-bottom: 16px;
   }
   .icon-arrow-left,.icon-arrow-right {
     align-items: center;

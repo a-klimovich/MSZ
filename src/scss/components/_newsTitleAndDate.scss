@@ -1,12 +1,20 @@
 .news-item-title-and-date {
   margin-bottom: 14px;
-  
+  margin-top: 6px;
+  @include md {
+    margin-bottom: 32px;
+    margin-top: 25px;
+  }
+  @include xl {
+    margin-bottom: 40px;
+    margin-top: 53px;
+  }
+
   &__title {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: $black;
-    margin-top: 6px;
     margin-bottom: 18px;
     text-align: center;
 
@@ -14,6 +22,8 @@
       text-align: left;
       font-size: 36px;
       line-height: 43px;
+    }
+    @include xl {
       margin-bottom: 40px;
     }
   }

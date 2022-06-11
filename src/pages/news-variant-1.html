@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   @@include('../utils/head.html')
-
+  <head>
+    <script 
+    src="https://api-maps.yandex.ru/2.1/?apikey=2c81e557-0efd-45b8-80fa-4d310f01d64a&lang=en_US" type="text/javascript">
+    </script>
+  </head>
   <body class="page__body">
     <div class="main-wrapper gran-pri-page">
       @@include('../components/Header/index.html')
@@ -42,14 +46,7 @@
               «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам которого предприятие
               было удостоено Дипломами победителя в следующих номинациях:
             </p>
-            <div id="map" class="gran-pri__map">
-              <script
-                type="text/javascript"
-                charset="utf-8"
-                async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adcfe4e539aa5a829475e94144f5951c351a3859017e7402c40dc1fd04b389d5f&amp;width=100%25&amp;height=526&amp;lang=ru_RU&amp;scroll=true"
-              ></script>
-            </div>
+            <div id="map" class="gran-pri__map"></div>
           </div>
         </div>
 
@@ -67,4 +64,5 @@
     </div>
   </body>
   @@include('../utils/includes.html')
+  
 </html>
