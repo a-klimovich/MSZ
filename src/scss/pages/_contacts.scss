@@ -1,0 +1,54 @@
+.contacts-page {
+  .contacts-page-wrapper {
+    
+    @include lg {
+      padding: 50px 0 60px;
+    }
+  }
+  .contacts-map-box {
+    
+    @include lg {
+      margin-bottom: 68px;
+    }
+  }
+
+  .department-contacts {
+    
+    @include lg {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+
+      @include lg {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 44px;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .contact-card {
+        margin-bottom: 5px;
+
+        @include md {
+          margin-right: 7px;
+          margin-bottom: 7px;
+        }
+
+        @include lg {
+          margin-right: 15px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
