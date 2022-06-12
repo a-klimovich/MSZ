@@ -173,5 +173,15 @@ $(document).ready(function () {
         },
       ]
     });
+
+    ymaps.ready(init);
+    function init(){ 
+        var myMap = new ymaps.Map("map", {
+            center: [52.20, 24.33],
+            zoom: 15
+        });
+    }
+
   })();
 });
+

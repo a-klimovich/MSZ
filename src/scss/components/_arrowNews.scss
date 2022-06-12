@@ -1,0 +1,35 @@
+.arrow-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 26px;
+  font-size: 18px;
+  line-height: 21px;
+  flex-direction: column;
+
+  @include md {
+    padding-top: 55px;
+    padding-bottom: 65px;
+    flex-direction: row;
+  }
+  .arrow-text {
+    margin: 0 8px;
+    
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+  .arrow-left,.arrow-right {
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px;
+  }
+  .icon-arrow-left,.icon-arrow-right {
+    align-items: center;
+    display: flex;
+  }
+  .icon-arrow-left {
+    transform: rotate(180deg);
+  }
+}
