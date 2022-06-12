@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper error-page">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      <div class="container container--xl">
+        <button class="btn btn-reset">
+          НА ГЛАВНУЮ
+        </button>
+        
+        <picture>
+          <source srcset="../assets/errors/404-sm.jpg" type="image">
+          <source srcset="../assets/errors/404-md.jpg" type="image">
+          <img loading="lazy" src="../assets/errors/404-lg.jpg" class="image" width="" height="" alt="ERROR">
+        </picture>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>

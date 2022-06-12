@@ -2,23 +2,265 @@
 <html lang="en" class="page">
   @@include('../utils/head.html')
 <body class="page__body">
-  <div class="main-wrapper for-client">
+  <div class="main-wrapper contacts-page">
     @@include('../components/Header/index.html')
   
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
-        <section class="department-contacts">
-          <p class="department-contacts__title"></p>
+        <div class="contacts-page-wrapper">
+          <!-- init MAP from JS -->
+        <div id="map contacts-map-box"></div>
 
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Руководящий состав</p>
+          <!-- TODO: поправить стили секцый карты фиксированной высотой центровать вэлью -->
           <div class="department-contacts__grid">
-            @@include('../components/ContactItem/index.html')
-            @@include('../components/ContactItem/index.html')
-            @@include('../components/ContactItem/index.html')
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Директор",
+                "name": "typeNode",
+                "typeNode": '<strong>Чиботарь Руслан Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 2-23-21",
+                },
+              },
+              {
+                "title": "Приемная",
+                "name": "typeNode",
+                "typeNode": '<p>тел/факс  (+375 1642) 2-23-21</p>',
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sec@kobrincheese.com",
+                  "emailView": " sec@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Первый заместитель директора",
+                "name": "typeNode",
+                "typeNode": '<strong>Токарь Николай Николаевич</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Главный инженер",
+                "name": "typeNode",
+                "typeNode": '<strong>Грень Эдуард Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+              {
+                "title": "Заместитель главного инженера",
+                "name": "typeNode",
+                "typeNode": '<strong>Зановский Дмитрий Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164227300",
+                  "phoneView": "+375 1642 2-73-00",
+                },
+              },
+              {
+                "title": "Главный бухгалтер",
+                "name": "typeNode",
+                "typeNode": '<strong>Новик Елена Владимировна</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164241679",
+                  "phoneView": "+375 1642 4-16-79",
+                },
+              },
+              {
+                "title": "Ведущий экономист",
+                "name": "typeNode",
+                "typeNode": '<strong>Кицененко Светлана Евгеньевна</strong>',
+                "contact": 'mixed',
+                "contactNumber": {
+                  "phoneLink": "375164225653",
+                  "phoneView": "+375 1642 2-56-53",
+                },
+                "contactEmail": {
+                  "emailLink": "ekonomist@kobrincheese.com",
+                  "emailView": "ekonomist@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Бухгалтерия",
+                "name": "numbers",
+                "numbersFirst": {
+                  "telLink": '375164222293',
+                  "telView": '+375 1642 2-22-93',
+                },
+                "numbersSecond": {
+                  "telLink": '375164222951',
+                  "telView": '+375 1642 2-29-51',
+                },
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "zambuh@kobrincheese.com",
+                  "emailView": " zambuh@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Главный технолог",
+                "name": "typeNode",
+                "typeNode": '<strong>Кузьменя Снежана Николаевна</strong>',
+                "contact": 'mixed',
+                "contactNumber": {
+                  "phoneLink": "375164222604",
+                  "phoneView": "+375 1642 2-26-04",
+                },
+                "contactEmail": {
+                  "emailLink": "teh@kobrincheese.com",
+                  "emailView": "teh@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Отдел главного технолога",
+                "name": "typeNode",
+                "typeNode": '',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164240739",
+                  "phoneView": "+375 1642 4-07-39",
+                },
+              },
+            ])
           </div>
         </section>
-        <section class="department-contacts"></section>
+
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Отдел маркетинга и сбыта</p>
+
+          <div class="department-contacts__grid">
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Начальник отдела маркетинга и сбыта",
+                "name": "typeNode",
+                "typeNode": '<strong>Шибун Леонид Федорович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 4-16-91",
+                },
+              },
+              {
+                "title": "Специалисты по продаже",
+                "name": "numbers",
+                "numbersFirst": {
+                  "telLink": '375164222970',
+                  "telView": '+375 1642 2-29-70',
+                },
+                "numbersSecond": {
+                  "telLink": '375164245064',
+                  "telView": '+375 1642 4-50-64',
+                },
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sale@kobrincheese.com",
+                  "emailView": "sale@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Cпециалисты по ВЭД",
+                "name": "number",
+                "number": {
+                  "telLink": "375164222604",
+                  "telView": "+375 1642 2-26-04",
+                },
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Cпециалисты по маркетингу",
+                "name": "number",
+                "number": {
+                  "telLink": "375164222604",
+                  "telView": "+375 1642 2-26-04",
+                },
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+            ])
+          </div>
+        </section>
+
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Руководящий состав</p>
+
+          <div class="department-contacts__grid">
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Директор",
+                "name": "typeNode",
+                "typeNode": '<strong>Чиботарь Руслан Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 2-23-21",
+                },
+              },
+              {
+                "title": "Приемная",
+                "name": "typeNode",
+                "typeNode": '<p>тел/факс  (+375 1642) 2-23-21</p>',
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sec@kobrincheese.com",
+                  "emailView": " sec@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Первый заместитель директора",
+                "name": "typeNode",
+                "typeNode": '<strong>Токарь Николай Николаевич</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Главный инженер",
+                "name": "typeNode",
+                "typeNode": '<strong>Грень Эдуард Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+            ])
+          </div>
+        </section>
+
+        <section class="our-details centered">
+          <p class="department-contacts__title">Наши реквизиты</p>
+
+          <br><br>
+          <p>Республика Беларусь,</p>
+          <p>225304, Брестская область,</p>
+          <p>г. Кобрин, ул. Советская, 128.</p>
+          <p>УНП 200093343</p>
+
+          <br><br>
+          <p><a href="mailto:kbrmsz@brest.by">e-mail: kbrmsz@brest.by</a></p>
+        </section>
+        </div>
       </div>
     </main>
 
