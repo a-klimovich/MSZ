@@ -176,15 +176,8 @@ $(document).ready(function () {
 
     ymaps.ready(init);
     function init(){ 
-        // Creating the map.    
         var myMap = new ymaps.Map("map", {
-            // The map center coordinates.
-            // Default order: “latitude, longitude”.
-            // To not manually determine the map center coordinates,
-            // use the Coordinate detection tool.
             center: [52.20, 24.33],
-            // Zoom level. Acceptable values:
-            // from 0 (the entire world) to 19.
             zoom: 15
         });
     }

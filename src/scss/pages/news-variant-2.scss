@@ -1,19 +1,17 @@
-.gran-pri-page {
-  .gran-pri {
-
+.news-variant-page {
+  .news-variant {
     &__imgs {
       padding: 19px 0 23px;
-
-    img {
-      width: 49%;
-      height: 88px;
-    }
-    &quote {
       display: flex;
-    
+      justify-content: space-between;
+      img {
+        width: 49%;
+      }
+      
+      &quote {
+        display: flex;
+      }
 
     }
-
-  }
   }
 }
