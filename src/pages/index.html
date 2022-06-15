@@ -37,7 +37,7 @@
       <div class="container">
         <div class="about-plant">
           <div class="about-plant__content">
-            <h4 class="titl">О ЗАВОДЕ</h4>
+            <h4 class="title">О ЗАВОДЕ</h4>
             <p class="subtitle">Работаем с 1939</p>
 
             <p class="text">
@@ -50,27 +50,33 @@
           </div>
 
           <div class="about-plant__scheam">
-            <div class="scfs-wrap">
+            <div class="scheam-wrap">
+              <div class="scheam__img show">
+                @@include('../assets/book.svg') 
+              </div>
               <div class="scheam__img">
                 @@include('../assets/manufacture.svg')
-                @@include('../assets/politics.svg')
+              </div>
+              <div class="scheam__img">
                 @@include('../assets/roket.svg')
-                @@include('../assets/book.svg')
+              </div>
+              <div class="scheam__img">
+                @@include('../assets/politics.svg')
               </div>
             </div>
 
             <div class="scheam__lines">
               <div class="line line_top">
-                <span>ИСТОРИЯ</span>
+                <span class="line_text">ИСТОРИЯ</span>
               </div>
-              <div class="line">
-                <span>ПРОИЗВОДСТВО</span>
+              <div class="line line_2">
+                <span class="line_text">ПРОИЗВОДСТВО</span>
               </div>
-              <div class="line">
-                <span>МИССИЯ</span>
+              <div class="line line_3">
+                <span class="line_text">МИССИЯ</span>
               </div>
               <div class="line line_bottom">
-                <span>ПОЛИТИКА</span>
+                <span class="line_text">ПОЛИТИКА</span>
               </div>
             </div>
           </div>
@@ -350,7 +356,37 @@
     @@include('../components/Footer/index.html')
   </div>
 </body>
+<script>
+  const text = document.querySelectorAll('.line_text');
+  const plantScheam = document.querySelector('.about-plant__scheam');
+  const scheamImg = document.querySelectorAll('.scheam__img');
+  text.forEach((e, i) => {
+    e.addEventListener('mouseover', () => {
+      for (let i = 0; i < 4; i++ ) {
+        plantScheam.classList.remove(`active-section-${i+1}`) 
+        scheamImg[i].classList.remove('show')
+      }
+      if (i === 0) {
+        plantScheam.classList.add('active-section-1');
+        scheamImg[i].classList.add('show');
+      }
+      if (i === 1) {
+        plantScheam.classList.add('active-section-2')
+        scheamImg[i].classList.add('show');
+      }
+      if (i === 2) {
+        plantScheam.classList.add('active-section-3')
+        scheamImg[i].classList.add('show');
+      }
+      if (i === 3) {
+        plantScheam.classList.add('active-section-4')
+        scheamImg[i].classList.add('show');
+      }
+  }
+  )})
 
+
+</script>
 @@include('../utils/includes.html')
 
 </html>

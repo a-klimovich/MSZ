@@ -20,31 +20,32 @@
       @include xl {
         max-width: 335px;
       }
-      .titl {
+      .title {
         font-weight: 500;
         font-size: 24px;
-        line-height: 29px;
+        line-height: 29.26px;
         text-align: center;
         margin-bottom: 22px;
 
         @include md {
           font-size: 36px;
-          line-height: 44px;
+          line-height: 43.88px;
           text-align: left;
           margin-bottom: 8px;
+          margin-top: 68px;
         }
       }
       .subtitle {
         font-weight: 500;
         font-size: 18px;
-        line-height: 22px;
+        line-height: 21.94px;
         color: $gray-2;
         margin-bottom: 24px;
       }
       .text {
         font-weight: 500;
         font-size: 18px;
-        line-height: 22px;
+        line-height: 21.94px;
         color: $gray-2;
         margin-bottom: 40px;
 
@@ -59,37 +60,58 @@
       width: 100%;
       margin-bottom: 50px;
       height: 150px;
-
-      .scfs-wrap {
+      @include md {
+        height: 330px;
+        width: 540px;
+        margin: auto;
+      }
+      @include xl {
+        width: 760px;
+      }
+      .icon-book, 
+      .icon-manufacture,
+      .icon-politics,
+      .icon-roket {
+        width: 70%;
+        height: 70%;
+      }
+      .scheam-wrap {
         @include flex-all-center;
         height: 100%;
         width: 100%;
-        padding-top: 13px;
+        margin-top: 20px;
         max-width: 120px;
+        max-height: 120px;
+
+        @include md {
+          max-width: 282px;
+          max-height: 282px;
+          margin-top: 35px;
+        }
+         
+        @include xl {
+          max-width: 323px;
+          max-height: 323px;
+          margin-top: 35px;
+        }
+
+        .scheam__img {
+          display: none;
+        }
+        .scheam__img.show {
+          display: flex;
+        }
       }
 
       .scheam__img {
         @include flex-all-center;
         width: 100%;
-        height: 120px;
+        height: 100%;
         border-radius: 50%;
         border: 3px solid $gray-2;
         position: relative;
         z-index: 1;
-        background-color: $white;
-
-        .icon-manufacture {
-          display: block;
-        }
-        .icon-politics {
-          display: none;
-        }
-        .icon-roket {
-          display: none;
-        }
-        .icon-book {
-          display: none;
-        }
+        background-color: $white; 
       }
 
       .scheam__lines {
@@ -103,7 +125,7 @@
         .line {
           position: relative;
           text-align: end;
-
+          
           &::after {
             content: "";
             position: absolute;
@@ -113,6 +135,17 @@
             height: 2px;
             background-color: $gray-2;
           }
+          .line_text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+  
+            @include md {
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 27px;
+            }
+          }
         }
 
         .line.line_top,
@@ -121,27 +154,142 @@
             content: "";
             position: absolute;
             height: 2px;
-            background-color: #4f4f4f;
+            background-color: $gray-2;
             width: 30px;
             left: -25px;
+            @include md {
+              width: 78px;
+              left: -66px;
+            }
           }
+    
         }
 
         .line.line_top {
           &::before {
             transform: rotate(-45deg);
             bottom: -10px;
+            @include md {
+              bottom: -27px;
+            }
           }
         }
         .line.line_bottom {
           &::before {
             transform: rotate(45deg);
             bottom: 10px;
+            @include md {
+              bottom: 27px;
+            }
           }
         }
       }
     }
   }
+
+
+.active-section-1 {
+  .scheam__lines {
+    .line.line_top {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $orange;
+        width: 30px;
+        left: -25px;
+        @include md {
+          width: 78px;
+          left: -66px;
+        }
+      }
+    }
+  }
+}
+.active-section-2 {
+  .scheam__lines {
+    .line.line_2 {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+    }
+  }
+}
+.active-section-3 {
+  .scheam__lines {
+    .line.line_3 {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+    }
+  }
+}
+.active-section-4 {
+  .scheam__lines {
+    .line.line_bottom {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $orange;
+        width: 30px;
+        left: -25px;
+        @include md {
+          width: 78px;
+          left: -66px;
+        }
+      }
+    }
+  }
+}
+ .scheam__img  { 
+  display: none;
+}
+.scheam__img .show { 
+  display: block;
+}
 
   .production {
     margin: 43px 0 47px;
@@ -315,7 +463,7 @@
       width: 266px;
       height: 210px;
       padding: 22px 0 0 41px;
-      border: 1px solid #ffffff;
+      border: 1px solid $white;
       justify-self: center;
       align-self: center;
 
