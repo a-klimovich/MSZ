@@ -11,6 +11,10 @@
       color: $white;
       padding-top: 20px;
       padding-bottom: 21px;
+      @include md {
+        padding-top: 32px;
+        padding-bottom: 61px;
+      }
 
       &__title {
         font-size: 24px;
@@ -45,7 +49,7 @@
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         &__title {
           font-size: 24px;
           line-height: 29px;
@@ -58,7 +62,13 @@
             svg {
               width: 48px;
               height: 48px;
+
+              @include md {
+                width: 85px;
+                height: 85px;
+              }
             }
+
           }
         }
       }
@@ -71,14 +81,14 @@
     // background-position: left center;
     padding-top: 25px;
     padding-bottom: 32px;
-    
-    // @include md {
-    //   padding-top: 40px;
-    //   padding-bottom: 25px;
-    // }
-    // @include lx {
-    //   padding-bottom: 49px;
-    // }
+
+    @include md {
+      padding-top: 40px;
+      padding-bottom: 25px;
+    }
+    @include xl {
+      padding-bottom: 44px;
+    }
 
     @include bg-cover;
 
@@ -92,6 +102,15 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      text-align: center;
+
+      @include md {
+        text-align: left;
+        justify-content: left;
+      }
+      @include xl {
+        justify-content: space-between;
+      }
 
       p {
         color: $white;
@@ -115,7 +134,12 @@
       }
 
       &__connect {
-
+        @include md {
+          margin-right: 126px;
+        }
+        @include xl {
+          margin-right: 0;
+        }
         .title {
           margin-bottom: 41px;
         }
@@ -128,11 +152,10 @@
             align-items: center;
             margin-right: 13px;
             margin-bottom: 1rem;
+            span {
+              margin-right: 13px;
+            }
           }
-
-          // span {
-          //   margin-right: 13px;
-          // }
         }
 
         .footer-btn {
@@ -141,13 +164,21 @@
           justify-content: center;
           width: 226px;
           height: 54px;
-          background: #ffffff;
+          background: $white;
           border-radius: 10px;
+          margin-bottom: 21px;
 
+          @include md {
+            margin-bottom: 74px;
+          }
+          @include xl {
+            margin-bottom: 0;
+          }
           @include hover {
             background-color: $orange;
             color: $white;
           }
+
         }
       }
 
@@ -170,24 +201,32 @@
       }
 
       &__address {
-        padding-left: 50px;
-
+        //padding-left: 50px;
+        .logo svg {
+          @include md {
+            margin-left: 61px;
+          }
+        }
         .location {
-          position: relative;
-          margin-bottom: 25px;
+          //position: relative;
+          margin-bottom: 36px;
 
           span {
-            position: absolute;
+            //position: absolute;
             right: calc(100% + 6px);
-            top: 0;
+            //top: 0;
+            svg {
+              margin-bottom: 11px;
+              margin-right: 19px;
+            }
           }
 
           &__link {
             display: inline-block;
             font-weight: 500;
             font-size: 18px;
-            line-height: 22px;
-            max-width: 285px;
+            line-height: 27px;
+            max-width: 268px;
             color: $orange;
           }
         }
@@ -197,10 +236,13 @@
 
   .wrapper__copyright {
     background-color: #343C49;
-    padding: 44px 0 57px 0;
+    padding: 49px 0 37px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 
     .copyright-text {
-      color: #bdbdbd;
+      color: $gray-4;
     }
   }
 }
