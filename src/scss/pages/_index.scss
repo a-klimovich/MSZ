@@ -17,6 +17,10 @@
     }
 
     &__content {
+      text-align: center;
+      @include md {
+        text-align: left;
+      }
       @include xl {
         max-width: 335px;
       }
@@ -24,13 +28,11 @@
         font-weight: 500;
         font-size: 24px;
         line-height: 29.26px;
-        text-align: center;
         margin-bottom: 22px;
 
         @include md {
           font-size: 36px;
           line-height: 43.88px;
-          text-align: left;
           margin-bottom: 8px;
           margin-top: 68px;
         }
@@ -48,10 +50,12 @@
         line-height: 21.94px;
         color: $gray-2;
         margin-bottom: 40px;
-
         @include md {
           margin-bottom: 30px;
         }
+      }
+      .btn-reset {
+        width: 273px;
       }
     }
 
