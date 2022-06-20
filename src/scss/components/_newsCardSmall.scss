@@ -4,7 +4,11 @@
   padding: 29px 24px 23px;
   max-width: 377px;
   height: 456px;
+  margin-bottom: 8px;
   cursor: pointer;
+  @include md {
+    margin-bottom: 14px;
+  }
   
   &__img {
     height: 272px;

@@ -288,12 +288,13 @@
     }
   }
 }
- .scheam__img  { 
+.scheam__img  { 
   display: none;
 }
 .scheam__img .show { 
   display: block;
 }
+
 
   .production {
     margin: 43px 0 47px;
@@ -359,19 +360,23 @@
   }
 
   &__news {
-    padding: 35px 0 47px;
+    padding: 35px 10px 47px;
     max-width: 1570px;
     margin: 0 auto;
-    padding: 0 10px;
-
+ 
     @include md {
-      padding: 0 34px;
+      padding: 66px 34px 37px;
     }
-
+    @include md {
+      padding: 50px 34px 66px;
+    }
     h2 {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 45px;
+      @include md {
+        margin-bottom: 50px;
+      }
     }
 
     &--wrapper {
@@ -400,6 +405,11 @@
         }
       }
     }
+
+    .btn-news {
+      display: block;
+      margin: auto;
+    }
   }
 
   .bg-img-exclusive {
@@ -417,16 +427,16 @@
 
   &__always-best {
     padding-top: 34px;
-    padding-bottom: 46px;
+    padding-bottom: 13px;
 
     @include md {
       padding-top: 54px;
-      padding-bottom: 82px;
+      padding-bottom: 49px;
     }
 
     @include lg {
       padding-top: 54px;
-      padding-bottom: 112px;
+      padding-bottom: 79px;
     }
 
     .always-best-title {
@@ -466,10 +476,11 @@
     .cardochka {
       width: 266px;
       height: 210px;
-      padding: 22px 0 0 41px;
+      padding: 22px 20px 0 41px;
       border: 1px solid $white;
       justify-self: center;
       align-self: center;
+      margin-bottom: 33px;
 
       .icone {
         margin-bottom: 1rem;
@@ -497,11 +508,15 @@
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      color: $black;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
       margin-bottom: 34px;
 
       @include md {
+        font-size: 36px;
+        line-height: 44px;
         margin-bottom: 50px;
       }
     }
