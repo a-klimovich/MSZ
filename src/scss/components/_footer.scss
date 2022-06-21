@@ -77,8 +77,6 @@
 
   .wrapper__navigate {
     background-image: url("../assets/footer-bg.jpg");
-    // background-repeat: no-repeat;
-    // background-position: left center;
     padding-top: 25px;
     padding-bottom: 32px;
     margin-bottom: 10px;
@@ -95,8 +93,6 @@
 
     @media screen and (max-width: 768px) {
       background-image: url("../assets/footer-bg-sm.jpg");
-      // background-position: center;
-      // background-size: cover;
     }
 
     .navigate {
@@ -135,8 +131,10 @@
       }
 
       &__connect {
+        order: 2;
         @include md {
           margin-right: 126px;
+          order: 1;
         }
         @include xl {
           margin-right: 0;
@@ -185,7 +183,10 @@
 
       &__links {
         margin-bottom: 31px;
-
+        order: 1;
+        @include md {
+          order: 2;
+        }
         p {
           margin-bottom: 23px;
         }
@@ -202,20 +203,18 @@
       }
 
       &__address {
-        //padding-left: 50px;
+        order: 3;
+        
         .logo svg {
           @include md {
             margin-left: 61px;
           }
         }
         .location {
-          //position: relative;
           margin-bottom: 36px;
 
           span {
-            //position: absolute;
             right: calc(100% + 6px);
-            //top: 0;
             svg {
               margin-bottom: 11px;
               margin-right: 19px;

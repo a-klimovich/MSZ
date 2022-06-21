@@ -49,7 +49,7 @@
             <button class="btn-reset btn-max">УЗНАТЬ БОЛЬШЕ</button>
           </div>
 
-          <div class="about-plant__scheam">
+          <div class="about-plant__scheam active-section-1">
             <div class="scheam-wrap">
               <div class="scheam__img show">
                 @@include('../assets/book.svg') 
@@ -338,9 +338,9 @@
       <div class="bg-gray-6">
         <div class="container">
           <div class="charity">
-            <p class="charity__text centered">
+            <p class="charity__text centered">  
               Программа мероприятий по реализации 
-              профилактического проекта "Кобринский район - 
+              профилактического проекта "Кобринский район - <br>
               территория здоровья" на 2020 - 2025г.
             </p>
 
@@ -356,37 +356,7 @@
     @@include('../components/Footer/index.html')
   </div>
 </body>
-<script>
-  const text = document.querySelectorAll('.line_text');
-  const plantScheam = document.querySelector('.about-plant__scheam');
-  const scheamImg = document.querySelectorAll('.scheam__img');
-  text.forEach((e, i) => {
-    e.addEventListener('mouseover', () => {
-      for (let i = 0; i < 4; i++ ) {
-        plantScheam.classList.remove(`active-section-${i+1}`) 
-        scheamImg[i].classList.remove('show')
-      }
-      if (i === 0) {
-        plantScheam.classList.add('active-section-1');
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 1) {
-        plantScheam.classList.add('active-section-2')
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 2) {
-        plantScheam.classList.add('active-section-3')
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 3) {
-        plantScheam.classList.add('active-section-4')
-        scheamImg[i].classList.add('show');
-      }
-  }
-  )})
 
-
-</script>
 @@include('../utils/includes.html')
 
 </html>

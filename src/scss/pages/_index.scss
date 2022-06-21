@@ -521,7 +521,12 @@
       }
     }
   }
-
+  .bg-gray-6.container {
+      @include xl {
+        padding: 0 10px;
+      }
+  }
+  
   .charity {
     display: flex;
     flex-direction: column-reverse;
@@ -530,13 +535,23 @@
 
     &__text {
       color: $gray-1;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      width: 295px;
+      @include md{
+        width: 700px;
+      }
+      @include xl {
+        width: 601px;
+      }
     }
 
     &__img-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       img {
         @include mb(44px);
@@ -553,10 +568,10 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 38px;
+        margin-bottom: 43px;
 
         img {
-          @include mr(24px);
+          @include mr(28px);
           @include mb(0);
         }
       }
@@ -576,10 +591,6 @@
         img {
           margin: 0;
         }
-      }
-
-      &__text {
-        max-width: 420px;
       }
     }
   }
