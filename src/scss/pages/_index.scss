@@ -2,15 +2,60 @@
   .about-plant {
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 26px;
+    padding-bottom: 48px;
 
+    @include md {
+      padding-top: 39px;
+      padding-bottom: 42px;
+    }
     @include xl {
       display: flex;
       flex-direction: row;
+      padding-top: 72px;
+      padding-bottom: 101px;
     }
 
     &__content {
+      text-align: center;
+      @include md {
+        text-align: left;
+      }
       @include xl {
         max-width: 335px;
+      }
+      .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29.26px;
+        margin-bottom: 22px;
+
+        @include md {
+          font-size: 36px;
+          line-height: 43.88px;
+          margin-bottom: 8px;
+          margin-top: 68px;
+        }
+      }
+      .subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21.94px;
+        color: $gray-2;
+        margin-bottom: 24px;
+      }
+      .text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21.94px;
+        color: $gray-2;
+        margin-bottom: 40px;
+        @include md {
+          margin-bottom: 30px;
+        }
+      }
+      .btn-reset {
+        width: 273px;
       }
     }
 
@@ -19,37 +64,58 @@
       width: 100%;
       margin-bottom: 50px;
       height: 150px;
-
-      .scfs-wrap {
+      @include md {
+        height: 330px;
+        width: 540px;
+        margin: auto;
+      }
+      @include xl {
+        width: 760px;
+      }
+      .icon-book, 
+      .icon-manufacture,
+      .icon-politics,
+      .icon-roket {
+        width: 70%;
+        height: 70%;
+      }
+      .scheam-wrap {
         @include flex-all-center;
         height: 100%;
         width: 100%;
-        padding-top: 13px;
+        margin-top: 20px;
         max-width: 120px;
+        max-height: 120px;
+
+        @include md {
+          max-width: 282px;
+          max-height: 282px;
+          margin-top: 35px;
+        }
+         
+        @include xl {
+          max-width: 323px;
+          max-height: 323px;
+          margin-top: 35px;
+        }
+
+        .scheam__img {
+          display: none;
+        }
+        .scheam__img.show {
+          display: flex;
+        }
       }
 
       .scheam__img {
         @include flex-all-center;
         width: 100%;
-        height: 120px;
+        height: 100%;
         border-radius: 50%;
         border: 3px solid $gray-2;
         position: relative;
         z-index: 1;
-        background-color: $white;
-
-        .icon-manufacture {
-          display: block;
-        }
-        .icon-politics {
-          display: none;
-        }
-        .icon-roket {
-          display: none;
-        }
-        .icon-book {
-          display: none;
-        }
+        background-color: $white; 
       }
 
       .scheam__lines {
@@ -63,7 +129,7 @@
         .line {
           position: relative;
           text-align: end;
-
+          
           &::after {
             content: "";
             position: absolute;
@@ -73,6 +139,17 @@
             height: 2px;
             background-color: $gray-2;
           }
+          .line_text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+  
+            @include md {
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 27px;
+            }
+          }
         }
 
         .line.line_top,
@@ -81,27 +158,143 @@
             content: "";
             position: absolute;
             height: 2px;
-            background-color: #4f4f4f;
+            background-color: $gray-2;
             width: 30px;
             left: -25px;
+            @include md {
+              width: 78px;
+              left: -66px;
+            }
           }
+    
         }
 
         .line.line_top {
           &::before {
             transform: rotate(-45deg);
             bottom: -10px;
+            @include md {
+              bottom: -27px;
+            }
           }
         }
         .line.line_bottom {
           &::before {
             transform: rotate(45deg);
             bottom: 10px;
+            @include md {
+              bottom: 27px;
+            }
           }
         }
       }
     }
   }
+
+
+.active-section-1 {
+  .scheam__lines {
+    .line.line_top {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $orange;
+        width: 30px;
+        left: -25px;
+        @include md {
+          width: 78px;
+          left: -66px;
+        }
+      }
+    }
+  }
+}
+.active-section-2 {
+  .scheam__lines {
+    .line.line_2 {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+    }
+  }
+}
+.active-section-3 {
+  .scheam__lines {
+    .line.line_3 {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+    }
+  }
+}
+.active-section-4 {
+  .scheam__lines {
+    .line.line_bottom {
+      span {
+        color: $orange;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $orange;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $orange;
+        width: 30px;
+        left: -25px;
+        @include md {
+          width: 78px;
+          left: -66px;
+        }
+      }
+    }
+  }
+}
+.scheam__img  { 
+  display: none;
+}
+.scheam__img .show { 
+  display: block;
+}
+
 
   .production {
     margin: 43px 0 47px;
@@ -167,19 +360,23 @@
   }
 
   &__news {
-    padding: 35px 0 47px;
+    padding: 35px 10px 47px;
     max-width: 1570px;
     margin: 0 auto;
-    padding: 0 10px;
-
+ 
     @include md {
-      padding: 0 34px;
+      padding: 66px 34px 37px;
     }
-
+    @include md {
+      padding: 50px 34px 66px;
+    }
     h2 {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 45px;
+      @include md {
+        margin-bottom: 50px;
+      }
     }
 
     &--wrapper {
@@ -208,6 +405,11 @@
         }
       }
     }
+
+    .btn-news {
+      display: block;
+      margin: auto;
+    }
   }
 
   .bg-img-exclusive {
@@ -225,16 +427,16 @@
 
   &__always-best {
     padding-top: 34px;
-    padding-bottom: 46px;
+    padding-bottom: 13px;
 
     @include md {
       padding-top: 54px;
-      padding-bottom: 82px;
+      padding-bottom: 49px;
     }
 
     @include lg {
       padding-top: 54px;
-      padding-bottom: 112px;
+      padding-bottom: 79px;
     }
 
     .always-best-title {
@@ -274,10 +476,11 @@
     .cardochka {
       width: 266px;
       height: 210px;
-      padding: 22px 0 0 41px;
-      border: 1px solid #ffffff;
+      padding: 22px 20px 0 41px;
+      border: 1px solid $white;
       justify-self: center;
       align-self: center;
+      margin-bottom: 33px;
 
       .icone {
         margin-bottom: 1rem;
@@ -305,16 +508,25 @@
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      color: $black;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
       margin-bottom: 34px;
 
       @include md {
+        font-size: 36px;
+        line-height: 44px;
         margin-bottom: 50px;
       }
     }
   }
-
+  .bg-gray-6.container {
+      @include xl {
+        padding: 0 10px;
+      }
+  }
+  
   .charity {
     display: flex;
     flex-direction: column-reverse;
@@ -323,13 +535,23 @@
 
     &__text {
       color: $gray-1;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      width: 295px;
+      @include md{
+        width: 700px;
+      }
+      @include xl {
+        width: 601px;
+      }
     }
 
     &__img-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       img {
         @include mb(44px);
@@ -346,10 +568,10 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 38px;
+        margin-bottom: 43px;
 
         img {
-          @include mr(24px);
+          @include mr(28px);
           @include mb(0);
         }
       }
@@ -369,10 +591,6 @@
         img {
           margin: 0;
         }
-      }
-
-      &__text {
-        max-width: 420px;
       }
     }
   }

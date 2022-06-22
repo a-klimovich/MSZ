@@ -1,19 +1,34 @@
 .footer {
   .wrapper__social {
     background-color: #404855;
-
+    margin-bottom: 10px;
+    @include md {
+      margin-bottom: 18px;
+    }
     .social {
       @include flex-all-center;
       flex-direction: column;
       color: $white;
-      padding-top: 31px;
-      padding-bottom: 60px;
+      padding-top: 20px;
+      padding-bottom: 21px;
+      @include md {
+        padding-top: 32px;
+        padding-bottom: 61px;
+      }
 
       &__title {
-        font-size: 36px;
+        font-size: 24px;
         font-weight: 500;
-        line-height: 44px;
-        margin-bottom: 60px;
+        line-height: 29.26px;
+        margin-bottom: 25px;
+        text-align: center;
+
+        @include md {
+          font-weight: 500;
+          font-size: 36px;
+          margin-bottom: 60px;
+          line-height: 44px;
+        }
       }
 
       &__list {
@@ -34,7 +49,7 @@
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         &__title {
           font-size: 24px;
           line-height: 29px;
@@ -47,7 +62,13 @@
             svg {
               width: 48px;
               height: 48px;
+
+              @include md {
+                width: 85px;
+                height: 85px;
+              }
             }
+
           }
         }
       }
@@ -56,27 +77,43 @@
 
   .wrapper__navigate {
     background-image: url("../assets/footer-bg.jpg");
-    // background-repeat: no-repeat;
-    // background-position: left center;
-    padding: 40px 0;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    margin-bottom: 10px;
+    @include md {
+      padding-top: 40px;
+      padding-bottom: 25px;
+      margin-bottom: 0;
+    }
+    @include xl {
+      padding-bottom: 44px;
+    }
+
     @include bg-cover;
 
     @media screen and (max-width: 768px) {
       background-image: url("../assets/footer-bg-sm.jpg");
-      // background-position: center;
-      // background-size: cover;
     }
 
     .navigate {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      text-align: center;
+
+      @include md {
+        text-align: left;
+        justify-content: left;
+      }
+      @include xl {
+        justify-content: space-between;
+      }
 
       p {
         color: $white;
         font-weight: 500;
         font-size: 23px;
-        line-height: 28px;
+        line-height: 28.04px;
       }
 
       li a {
@@ -94,7 +131,14 @@
       }
 
       &__connect {
-
+        order: 2;
+        @include md {
+          margin-right: 126px;
+          order: 1;
+        }
+        @include xl {
+          margin-right: 0;
+        }
         .title {
           margin-bottom: 41px;
         }
@@ -107,10 +151,9 @@
             align-items: center;
             margin-right: 13px;
             margin-bottom: 1rem;
-          }
-
-          span {
-            margin-right: 13px;
+            span {
+              margin-right: 13px;
+            }
           }
         }
 
@@ -120,18 +163,30 @@
           justify-content: center;
           width: 226px;
           height: 54px;
-          background: #ffffff;
+          background: $white;
           border-radius: 10px;
+          margin-bottom: 21px;
 
+          @include md {
+            margin-bottom: 74px;
+          }
+          @include xl {
+            margin-bottom: 0;
+          }
           @include hover {
             background-color: $orange;
             color: $white;
           }
+
         }
       }
 
       &__links {
-
+        margin-bottom: 31px;
+        order: 1;
+        @include md {
+          order: 2;
+        }
         p {
           margin-bottom: 23px;
         }
@@ -148,24 +203,30 @@
       }
 
       &__address {
-        padding-left: 50px;
-
+        order: 3;
+        
+        .logo svg {
+          @include md {
+            margin-left: 61px;
+          }
+        }
         .location {
-          position: relative;
-          margin-bottom: 25px;
+          margin-bottom: 36px;
 
           span {
-            position: absolute;
             right: calc(100% + 6px);
-            top: 0;
+            svg {
+              margin-bottom: 11px;
+              margin-right: 19px;
+            }
           }
 
           &__link {
             display: inline-block;
             font-weight: 500;
             font-size: 18px;
-            line-height: 22px;
-            max-width: 285px;
+            line-height: 27px;
+            max-width: 268px;
             color: $orange;
           }
         }
@@ -175,10 +236,13 @@
 
   .wrapper__copyright {
     background-color: #343C49;
-    padding: 44px 0 57px 0;
+    padding: 49px 0 37px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 
     .copyright-text {
-      color: #bdbdbd;
+      color: $gray-4;
     }
   }
 }
