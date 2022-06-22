@@ -1,13 +1,22 @@
 .achievements {
   &__text {
+    color: $gray-2;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 25px;
+    text-align: center;
 
     @include md {
-      margin-bottom: 13px;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 20px;
     }
 
     @include xl {
-      margin-bottom: 50px;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 45px;
     }
   }
 
@@ -23,6 +32,25 @@
     @include xl {
       row-gap: 33px;
       margin-bottom: 68px;
+    }
+  }
+  .layout {
+    padding-top: 13px;
+    padding-bottom: 42px;
+    @include md {
+      padding-top: 21px;
+      padding-bottom: 78px;
+    }
+    @include xl {
+      padding-top: 65px;
+      margin-bottom: 0;
+    }
+  }
+
+  .layout__nav {
+    padding-bottom: 21px;
+    @include md {
+      padding-bottom: 32px;
     }
   }
 }
