@@ -7,6 +7,10 @@
     @@include('../components/Header/index.html')
 
     <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': '../assets/img/header-img-4.jpg',
+        'title': 'КОБРИНСКИЕ СЫРЫ ФАСОВАННЫЕ'
+      })
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
@@ -18,7 +22,7 @@
           
           <div class="grid-layout-col grid-layout-col--first">
             <div class="image">
-              <img src="../assets/img/slider-newest-product-md.jpg" alt="product">
+              <img src="../assets/img/product-7.jpg" alt="product">
               <button type="button" class="btn btn-reset btnZoomImage">
                 @@include('../assets/search-icon.svg')
               </button>
@@ -41,7 +45,13 @@
               <h2 class="title">СЫР "СОЛНЕЧНЫЙ" 50% ФАСОВАННЫЙ СЕГМЕНТ</h2>
               <p class="product-code">Код продукта: 730</p>
 
-              <p class="text">Lorem ipsum dolor sit amet.</p>
+              <p class="text">Сыр полутвёрдый "Солнечный" 50% . Его отличает удивительный оранжевый цвет теста, превосходный насыщенный 
+                сырный вкус и аромат с легким пряно-сладковатым привкусом и кислинкой, фруктовыми нотками во вкусе. Консистенция сыра - эластичная.
+                Тонкая многослойная полиолефиновая плёнка позволяет существенно продлить  срок   хранения  разделенного  на  порционные  куски  сыра. 
+                Обеспечивает  сохранение   вкусовых   качеств  благодаря   надежной защите  от  запахов  и  газов  извне. Внутри такой  упаковки особая 
+                газовая    среда.     Благодаря отсутствию в  ней   кислорода продукт    не    портится   
+                так быстро,   как   в    случае   с использованием   обычной  стрейч-пленки, и  в  то  же время  дышит, 
+                чего   не позволяет  вакуумная упаковка.</p>
             </div>
 
             <div class="social-box-wrapper">
