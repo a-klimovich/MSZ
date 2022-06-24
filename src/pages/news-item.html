@@ -7,13 +7,17 @@
     @@include('../components/Header/index.html')
 
     <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': '../assets/img/news.jpg',
+        'title': 'НОВОСТИ'
+      })
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
         <div class="news-item-page__content-wrapper">
           @@include('../components/NewsTitleAndDate/index.html', {
           'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
-          'date': '15-15-15'
+          'date': 'Июнь 28, 2019'
           })
 
           <p>
@@ -29,16 +33,19 @@
           <p>"Мороженое" за "Пломбир на сливках" в вафельном стакане, 12%</p>
           <br>
           <p>"Сыры сычужные" за сыры "Арамель с пажитником" 50% и "МонБлан. Старый Утес" 50%</p>
-          <b></b>
+          <br>
           <p>"Масло сливочное" за масло сладкосливочное несоленое 82,5%</p>
           <br>
           <p>"Майонез" за "Провансаль кобринский" 51%.</p>
           <br><br>
 
-          <div class="news-item-page__iamge-grid">
-            <img src="../assets/img/a1.jpg" alt="">
-            <img src="../assets/img/a1.jpg" alt="">
-            <img src="../assets/img/a1.jpg" alt="">
+          <div class="news-item-page__image-grid">
+            <img src="../assets/img/news-item-1.jpg" alt="">
+            <img src="../assets/img/news-item-1.jpg" alt="">
+            <img src="../assets/img/news-item-1.jpg" alt="">
+            <img src="../assets/img/news-item-1.jpg" alt="">
+            <img src="../assets/img/news-item-1.jpg" alt="">
+            <img src="../assets/img/news-item-1.jpg" alt="">
           </div>
         </div>
       </div>
