@@ -4,7 +4,10 @@
 <body class="page__body">
   <div class="main-wrapper achievements">
     @@include('../components/Header/index.html')
-  
+    @@include('../components/HeaderTitle/index.html', { 
+      'image': '../assets/img/header-img-2.jpg',
+      'title': 'ДОСТИЖЕНИЯ'
+    })  
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
@@ -25,7 +28,7 @@
             @@include('../components/Pagination/index.html')
           </div>
 
-          <div class="layout__nav pt-2">
+          <div class="layout__nav">
             @@include('../components/SectionMenu/index.html')
           </div>
         </div>
