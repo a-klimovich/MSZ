@@ -240,6 +240,13 @@ $(document).ready(function () {
             zoom: 15
         });
     }
+    // ymaps.ready(init);
+    // function init(){ 
+    //     var myMap2 = new ymaps.Map("map2", {
+    //         center: [52.20, 24.33],
+    //         zoom: 15
+    //     });
+    // }
 
   })();
 });

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="ru" class="page">
   @@include('../utils/head.html')
+  <head>
+    <script 
+    src="https://api-maps.yandex.ru/2.1/?apikey=2c81e557-0efd-45b8-80fa-4d310f01d64a&lang=en_US" type="text/javascript">
+    </script>
+  </head>
 <body class="page__body">
   <div class="main-wrapper contacts-page">
     @@include('../components/Header/index.html')
-  
+    @@include('../components/HeaderTitle/index.html', { 
+      'image': '../assets/img/header-img-3.jpg',
+      'title': 'КОНТАКТЫ'
+    })
     <main class="main">
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
         <div class="contacts-page-wrapper">
-          <!-- init MAP from JS -->
-        <div id="map contacts-map-box"></div>
+
+        <!-- <div id="map2" class="contacts-page__map"></div> -->
 
         <section class="department-contacts">
           <p class="department-contacts__title centered">Руководящий состав</p>
-          <!-- TODO: поправить стили секцый карты фиксированной высотой центровать вэлью -->
+
           <div class="department-contacts__grid">
             @@loop('../partials/contactItem.html', [
               {
@@ -250,23 +258,19 @@
 
         <section class="our-details centered">
           <p class="department-contacts__title">Наши реквизиты</p>
-
-          <br><br>
-          <p>Республика Беларусь,</p>
-          <p>225304, Брестская область,</p>
-          <p>г. Кобрин, ул. Советская, 128.</p>
-          <p>УНП 200093343</p>
-
-          <br><br>
-          <p><a href="mailto:kbrmsz@brest.by">e-mail: kbrmsz@brest.by</a></p>
+          <p class="department-contacts__descr">
+            Республика Беларусь,<br>
+            225304, Брестская область,<br>
+            г. Кобрин, ул. Советская, 128.<br>
+            УНП 200093343
+          </p>
+          <a href="mailto:kbrmsz@brest.by" class="department-contacts__email">e-mail: kbrmsz@brest.by</a>
         </section>
         </div>
       </div>
     </main>
-
     @@include('../components/Footer/index.html')
   </div>
 </body>
-
 @@include('../utils/includes.html')
 </html>
