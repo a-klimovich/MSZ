@@ -7,10 +7,24 @@
     @@include('../components/Header/index.html')
 
     <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': '../assets/img/header-img-5.jpg',
+        'title': 'ПРОДУКЦИЯ'
+      })
       @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
         <div class="product-list-page__grid">
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
+          @@include('../components/ProductListCard/index.html')
           @@include('../components/ProductListCard/index.html')
           @@include('../components/ProductListCard/index.html')
         </div>
