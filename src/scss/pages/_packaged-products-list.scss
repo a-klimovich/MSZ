@@ -1,26 +1,38 @@
 .packaged-products-list-page {
   &__content-wrapper {
-    padding: 9px 0 47px;
+    padding: 9px 0 37px;
 
     @include md {
-      padding: 35px 0 41px;
+      padding: 33px 0 62px;
     }
     
     @include xl {
-      padding: 40px 0 80px;
+      padding: 40px 0 53px;
+    }
+    .text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+      @include md {
+        font-size: 24px;
+        line-height: 29px;
+      }
     }
   }
   
   &__grid {
     display: grid;
     gap: 14px 0;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     
-    
+
     @include md {
       grid-template-columns: repeat(2, 1fr);
       gap: 11px 24px;
-      margin-bottom: 40px;
+      margin-bottom: 90px;
     }
     
     @include xl {
@@ -29,4 +41,5 @@
       margin-bottom: 54px;
     }
   }
+
 }
