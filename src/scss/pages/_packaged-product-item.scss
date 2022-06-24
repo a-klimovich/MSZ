@@ -81,7 +81,12 @@
           @include without-last {
             border-bottom: 2px solid $gray-5;
           }
-
+          .table-col {
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: -0.02em;
+          }
           &--custom {
             width: 100%;
             flex-direction: column;
@@ -136,6 +141,7 @@
       flex-direction: column;
       justify-content: space-between;
       .title {
+
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
@@ -150,12 +156,14 @@
       }
 
       .product-code {
+ 
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
         letter-spacing: -0.02em;
         color: $orange;
         margin-bottom: 10px;
+        font-style: italic;
 
         @include md {
           font-size: 22px;
@@ -170,12 +178,13 @@
         line-height: 20px;
         letter-spacing: -0.02em;
         color: $gray-2;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
 
         @include md {
           font-size: 24px;
           text-align: justify;
           line-height: 29px;
+          margin-bottom: 50px;
         }
       }
 
