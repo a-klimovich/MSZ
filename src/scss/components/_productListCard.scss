@@ -21,7 +21,6 @@
 
     .list-image {
       @include bg-cover;
-      @include image-set("../../assets/img/product-1");
       height: 280px;
 
       @include md {
