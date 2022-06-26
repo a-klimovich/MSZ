@@ -3,7 +3,6 @@
     margin-bottom: 0;
   }
   &__content {
-  //  margin-bottom: 1rem;
 
     .title {
       font-weight: 500;
@@ -29,9 +28,6 @@
       }
     }
 
-    @include lg {
-      // margin-bottom: 54px;
-    }
   }
 
   .image-wrapper {
