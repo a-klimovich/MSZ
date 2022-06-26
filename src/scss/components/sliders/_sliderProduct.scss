@@ -1,7 +1,29 @@
 #sliderProduct {
+  .slick-dots {
+    bottom: -50px;
+
+    li {
+      margin-right: 12px;
+    }
+
+    @include md {
+      bottom: -75px;
+
+      li {
+        margin-right: 18px;
+      }
+    }
+  }
   .slide {
+    padding: 0 10px;
+    text-align: center;
+
     &__img {
       margin-bottom: 38px;
+
+      img {
+        width: 100%;
+      }
       
       @include md {
         margin-bottom: 18px;

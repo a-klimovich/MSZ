@@ -10,6 +10,7 @@
     @include image-set("../../assets/sliderlogobg-1");
   }
 }
+
 #logoSlider {
   padding: 76px 0 94px;
 
@@ -19,6 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     border: 1px solid rgba(255, 255, 255, 0.34);
+  }
+
+  .slick-dots {
+    margin-top: 21px;
+    
   }
 }

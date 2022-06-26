@@ -7,45 +7,21 @@
   <div class="main-wrapper index-page">
     @@include('../components/Header/index.html')
 
-    <div id="mainSlider">
-      <div>
-        <div class="main-slide-item">
-          <p class="main-slide-item__text main-slide-item__text-1">НАШ САМЫЙ ТИТУЛОВАННЫЙ СЫР</p>
-          <h1>МААСДАМ</h1>
-          <p class="main-slide-item__text main-slide-item__text-2">ДЕСЯТКИ НАГРАД НА ВЫСТАВКАХ</p>
-        </div>
-      </div>
-
-      <div>
-        <div class="main-slide-item">
-          <p class="main-slide-item__text main-slide-item__text-1">НАШ САМЫЙ ТИТУЛОВАННЫЙ СЫР</p>
-          <h1>МААСДАМ</h1>
-          <p class="main-slide-item__text main-slide-item__text-2">ДЕСЯТКИ НАГРАД НА ВЫСТАВКАХ</p>
-        </div>
-      </div>
-
-      <div>
-        <div class="main-slide-item">
-          <p class="main-slide-item__text main-slide-item__text-1">НАШ САМЫЙ ТИТУЛОВАННЫЙ СЫР</p>
-          <h1>МААСДАМ</h1>
-          <p class="main-slide-item__text main-slide-item__text-2">ДЕСЯТКИ НАГРАД НА ВЫСТАВКАХ</p>
-        </div>
-      </div>
-    </div>
-
+    @@include('../components/Sliders/MainSlider.html')
+   
     <main class="main">
       <div class="container">
-        <div class="about-plant">
+        <section class="about-plant">
           <div class="about-plant__content">
             <h4 class="title">О ЗАВОДЕ</h4>
             <p class="subtitle">Работаем с 1939</p>
-
+            
             <p class="text">
               Открытое акционерное общество «Кобринский маслодельно-сыродельный завод» это предприятие с 80-летним
               опытом работы и уникальными традициями производства. Мы с гордостью можем вспомнить каждый год работы
               завода. Нам есть, о чем рассказать и чем гордиться!
             </p>
-
+            
             <button class="btn-reset btn-max">УЗНАТЬ БОЛЬШЕ</button>
           </div>
 
@@ -80,38 +56,12 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
       <div class="fluid-wrapper bg-slider-logo">
         <div class="container">
-          <div id="logoSlider">
-            <div>
-              <div class="slide">
-                <img src="../../assets/sliderlogo-1.png" alt="slideritemlogobrend-#1">
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <img src="../../assets/sliderlogo-2.png" alt="slideritemlogobrend-#1">
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <img src="../../assets/sliderlogo-3.png" alt="slideritemlogobrend-#1">
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <img src="../../assets/sliderlogo-4.png" alt="slideritemlogobrend-#1">
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <img src="../../assets/sliderlogo-5.png" alt="slideritemlogobrend-#1">
-              </div>
-            </div>
-          </div>
+          @@include('../components/Sliders/LogoSlider.html')
         </div>
       </div>
 
@@ -160,44 +110,7 @@
         <div class="container">
           <h2 class="centered">НОВИНКИ</h2>
 
-          <div id="sliderProduct">
-            <div>
-              <div class="slide">
-                <div class="slide__img">
-                  <img src="../assets/img/syr-1.jpg" alt="">
-                </div>
-                <h4>Сыр “Мондор Grano” 50% </h4>
-                <p>Твердые сыры</p>
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <div class="slide__img">
-                  <img src="../assets/img/syr-2.jpg" alt="">
-                </div>
-                <h4>Сыр “Гроссмейстер” 50% </h4>
-                <p>Полутвердые сыры</p>
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <div class="slide__img">
-                  <img src="../assets/img/syr-1.jpg" alt="">
-                </div>
-                <h4>Сыр “Мондор Grano” 50% </h4>
-                <p>Твердые сыры</p>
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                <div class="slide__img">
-                  <img src="../assets/img/syr-2.jpg" alt="">
-                </div>
-                <h4>Сыр “Гроссмейстер” 50% </h4>
-                <p>Полутвердые сыры</p>
-              </div>
-            </div>
-          </div>
+          @@include('../components/Sliders/SliderProduct.html')
         </div>
       </div>
       
@@ -267,72 +180,11 @@
       </div>
 
       <div class="container">
-        <div class="managment-stuff">
+        <section class="managment-stuff">
           <h2 class="centered">РУКОВОДЯЩИЙ СОСТАВ</h2>
   
-          <div id="managmentStuff">
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms1.jpg',
-                  'name': 'Чиботарь Руслан Иванович',
-                  'title': 'Директор',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms2.jpg',
-                  'name': 'Токарь Николай Николаевич',
-                  'title': 'Первый заместитель директора',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms3.jpg',
-                  'name': 'Грень Эдуард Иванович',
-                  'title': 'Главный инженер',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms1.jpg',
-                  'name': 'Чиботарь Руслан Иванович',
-                  'title': 'Директор',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms2.jpg',
-                  'name': 'Токарь Николай Николаевич',
-                  'title': 'Первый заместитель директора',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-            <div>
-              <div class="slide">
-                @@include('../components/Management/index.html', {
-                  'image': '../../assets/img/ms3.jpg',
-                  'name': 'Грень Эдуард Иванович',
-                  'title': 'Главный инженер',
-                  'text': 'Профессионал, прошедший все ступени производства, от сыродела до руководителя. Человек своего дела с уверенным взглядом в будущее.',
-                })
-              </div>
-            </div>
-          </div>
-        </div>
+          @@include('../components/Sliders/ManagmentStuf.html')
+        </section>
       </div>
 
       <div class="bg-gray-6">

@@ -43,7 +43,7 @@ a {
   color: $gray-2;
 
   @include hover {
-    color: $orange !important;
+    color: $orange;
   }
 }
 

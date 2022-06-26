@@ -1,11 +1,30 @@
 .pagination {
   display: flex;
+  justify-content: center;
+
+  @include md {
+    justify-content: flex-start;
+  }
+
+  &__number {
+    display: none;
+    &:nth-child(-n + 7) {
+      display: flex;
+    }
+
+    @include md {
+      display: flex;
+    }
+  }
+
+  &__prev,  &__next {
+    display: flex;
+  }
 
   a {
     font-family: 'Century Gothic';
     width: 39px;
     height: 39px;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;

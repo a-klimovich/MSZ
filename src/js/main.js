@@ -1,4 +1,57 @@
 $(document).ready(function () {
+  ymaps.ready(init);
+  function init(){ 
+    if ($('#storMap1')) {
+      var storMap1 = new ymap.Map('storMap1', {
+        center: [10, 11],
+        zoom: 15,
+      })
+      // var storMap2 = new ymap.Map('storMap2', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap3 = new ymap.Map('storMap3', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap4 = new ymap.Map('storMap4', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap5 = new ymap.Map('storMap5', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap6 = new ymap.Map('storMap6', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap7 = new ymap.Map('storMap7', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+      // var storMap8 = new ymap.Map('storMap8', {
+      //   center: [10, 11],
+      //   zoom: 15,
+      // })
+    }
+    
+
+    // if ('#map') {
+    //   var myMap = new ymaps.Map("map", {
+    //     center: [52.20, 24.33],
+    //     zoom: 15
+    //   });
+    // }
+
+    // if ('#map2') {
+    //   var myMap2 = new ymaps.Map("map2", {
+    //     center: [52.20, 24.33],
+    //     zoom: 15
+    //   });
+    // }
+  }
+
   (function () {
     window.onscroll = () => scrollFunction();
     // Base
@@ -59,9 +112,11 @@ $(document).ready(function () {
     const $productListCard = $('.production-list-card');
 
     $productListCard.each((i, elem)  => {
+      console.log(elem);
       const listLength = $('.list-menu li', elem).length;
       const $counterNode = $('.counter', elem);
-
+      
+      
       $(elem).on('click', () => {
         $(elem).toggleClass(cssClassActive)
       })
@@ -153,6 +208,7 @@ $(document).ready(function () {
 
     $("#logoSlider").slick({
       slidesToShow: 5,
+      slidesToScroll: 5,
       arrows: false,
       responsive: [
         {
@@ -161,34 +217,22 @@ $(document).ready(function () {
             dots: true,
             arrows: false,
             slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            dots: true,
-            arrows: false,
-            slidesToShow: 3,
+            slidesToScroll: 3,
           }
         },
         {
           breakpoint: 685,
           settings: {
-            dots: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: '30px',
             slidesToShow: 2,
+            slidesToScroll: 2,
           }
         },
         {
           breakpoint: 520,
           settings: {
             dots: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: '20px',
             slidesToShow: 1,
+            slidesToScroll: 1,
           }
         },
       ]
@@ -196,14 +240,14 @@ $(document).ready(function () {
 
     $("#sliderProduct").slick({
       slidesToShow: 2,
+      slidesToScroll: 2,
       dots: true,
       arrows: false,
       responsive: [
         {
           breakpoint: 980,
           settings: {
-            dots: true,
-            arrows: false,
+            slidesToScroll: 1,
             slidesToShow: 1,
           }
         },
@@ -212,43 +256,26 @@ $(document).ready(function () {
     
     $("#managmentStuff").slick({
       slidesToShow: 3,
+      slidesToScroll: 3,
       dots: true,
       arrows: false,
       responsive: [
         {
           breakpoint: 1200,
           settings: {
-            dots: true,
-            arrows: false,
+            slidesToScroll: 2,
             slidesToShow: 2,
           }
         },
         {
           breakpoint: 768,
           settings: {
-            dots: true,
-            arrows: false,
+            slidesToScroll: 1,
             slidesToShow: 1,
           }
         },
       ]
     });
-
-    ymaps.ready(init);
-    function init(){ 
-        var myMap = new ymaps.Map("map", {
-            center: [52.20, 24.33],
-            zoom: 15
-        });
-    }
-    // ymaps.ready(init);
-    // function init(){ 
-    //     var myMap2 = new ymaps.Map("map2", {
-    //         center: [52.20, 24.33],
-    //         zoom: 15
-    //     });
-    // }
-
   })();
 });
 

@@ -1,23 +1,8 @@
 #mainSlider {
   .slick-dots {
     bottom: 61px;
-
-    li {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background-color: $white;
-      margin-right: 18px;
-
-      @include hover {
-        background-color: $orange;
-      }
-    }
-
-    .slick-active {
-      background-color: $orange;
-    }
   }
+
   .main-slide-item {
     @include image-set("../../assets/img/main-slider-sm");
     @include bg-cover;
