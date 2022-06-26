@@ -235,14 +235,20 @@ $(document).ready(function () {
 
     ymaps.ready(init);
     function init(){ 
-        var myMap = new ymaps.Map("map", {
-            center: [52.20, 24.33],
-            zoom: 15
-        });
+      if ($('#map')) {
+        const myMap = new ymaps.Map("map", {
+          center: [52.20, 24.33],
+          zoom: 15
+      })};
+      if ($('#map2')) {
+        const myMap2 = new ymaps.Map("map2", {
+          center: [52.20, 24.33],
+          zoom: 15
+      })}
     }
     // ymaps.ready(init);
     // function init(){ 
-    //     var myMap2 = new ymaps.Map("map2", {
+    //     const myMap2 = new ymaps.Map("map2", {
     //         center: [52.20, 24.33],
     //         zoom: 15
     //     });
