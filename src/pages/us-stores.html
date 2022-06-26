@@ -6,8 +6,10 @@
     @@include('../components/Header/index.html')
   
     <main class="main">
-      @@include('../components/HeaderTitle/index.html')
-      @@include('../components/Breadcrumbs/index.html')
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': '../assets/img/header-img.jpg',
+        'title': 'ГДЕ КУПИТЬ?'
+      })      @@include('../components/Breadcrumbs/index.html')
 
       <div class="container container--xl">
         <div class="layout">
@@ -24,56 +26,56 @@
               @@include('../components/AddressCard/index.html', {
                 'title': 'Магазин и кафетерий <br> "Верас"',
                 'address': 'г. Кобрин, ул. Николаева, 1а',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-1.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Павильон <br> "Верас №1"',
                 'address': 'г. Кобрин,  пл. Матросова',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-2.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Павильон <br> "Верас №2"',
                 'address': 'г.Кобрин, ул. Дзержинского',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-3.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Павильон <br> "Верас №3"',
                 'address': 'г. Кобрин, ул. Интернациональная',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-4.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Магазин <br> "Верас"',
                 'address': 'д. Дивин, ул. Ленина',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-5.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Фирменный магазин <br> "Кобринские сыры"',
                 'address': 'г. Брест, ул. Мицкевича, д. 2/2',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-6.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Фирменный павильон <br> "Кобринские сыры"',
                 'address': 'г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-7.jpg',
                 'letetude': '',
                 'longetude': '',
               })
               @@include('../components/AddressCard/index.html', {
                 'title': 'Фирменный павильон <br> "Кобринские сыры"',
                 'address': 'г. Брест, ул. Волгоградская, 11/1 (микрорайон "Ковалево", 100 м от рынка "Лагуна")',
-                'image': '../assets/img/product-1.jpg',
+                'image': '../assets/img/address-8.jpg',
                 'letetude': '',
                 'longetude': '',
               })
