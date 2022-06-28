@@ -79,36 +79,6 @@ $(document).ready(function () {
     const plantScheam = document.querySelector('.about-plant__scheam');
     const scheamImg = document.querySelectorAll('.scheam__img');
     text.forEach((e, i) => {
-      e.addEventListener('mouseover', () => {
-        for (let i = 0; i < 4; i++ ) {
-          plantScheam.classList.remove(`active-section-${i+1}`) 
-          scheamImg[i].classList.remove('show')
-        }
-        if (i === 0) {
-          plantScheam.classList.add('active-section-1');
-          scheamImg[i].classList.add('show');
-        }
-        if (i === 1) {
-          plantScheam.classList.add('active-section-2')
-          scheamImg[i].classList.add('show');
-        }
-        if (i === 2) {
-          plantScheam.classList.add('active-section-3')
-          scheamImg[i].classList.add('show');
-        }
-        if (i === 3) {
-          plantScheam.classList.add('active-section-4')
-          scheamImg[i].classList.add('show');
-        }
-    })
-    // e.addEventListener('mouseout', () => {
-    //   for (let i = 0; i < 4; i++ ) {
-    //     plantScheam.classList.remove(`active-section-${i+1}`) 
-    //     scheamImg[i].classList.remove('show')
-    //   }
-    //   plantScheam.classList.add('active-section-1');
-    //   scheamImg[i].classList.add('show');
-    // })
     e.addEventListener('onclick', () => {
       for (let i = 0; i < 4; i++ ) {
         plantScheam.classList.remove(`active-section-${i+1}`) 
@@ -232,28 +202,6 @@ $(document).ready(function () {
         },
       ]
     });
-
-    ymaps.ready(init);
-    function init(){ 
-      if ($('#map')) {
-        const myMap = new ymaps.Map("map", {
-          center: [52.20, 24.33],
-          zoom: 15
-      })};
-      if ($('#map2')) {
-        const myMap2 = new ymaps.Map("map2", {
-          center: [52.20, 24.33],
-          zoom: 15
-      })}
-    }
-    // ymaps.ready(init);
-    // function init(){ 
-    //     const myMap2 = new ymaps.Map("map2", {
-    //         center: [52.20, 24.33],
-    //         zoom: 15
-    //     });
-    // }
-
   })();
 });
 
