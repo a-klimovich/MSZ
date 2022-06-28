@@ -66,7 +66,6 @@
     const $productListCard = $('.production-list-card');
 
     $productListCard.each((i, elem)  => {
-      console.log(elem);
       const listLength = $('.list-menu li', elem).length;
       const $counterNode = $('.counter', elem);
       
@@ -84,64 +83,15 @@
     })
 
     // SECTION VIEW CONTROLER
-    const text = document.querySelectorAll('.line_text');
-    const plantScheam = document.querySelector('.about-plant__scheam');
-    const scheamImg = document.querySelectorAll('.scheam__img');
-    text.forEach((e, i) => {
-    //   e.addEventListener('mouseover', () => {
-    //     for (let i = 0; i < 4; i++ ) {
-    //       plantScheam.classList.remove(`active-section-${i+1}`) 
-    //       scheamImg[i].classList.remove('show')
-    //     }
-    //     if (i === 0) {
-    //       plantScheam.classList.add('active-section-1');
-    //       scheamImg[i].classList.add('show');
-    //     }
-    //     if (i === 1) {
-    //       plantScheam.classList.add('active-section-2')
-    //       scheamImg[i].classList.add('show');
-    //     }
-    //     if (i === 2) {
-    //       plantScheam.classList.add('active-section-3')
-    //       scheamImg[i].classList.add('show');
-    //     }
-    //     if (i === 3) {
-    //       plantScheam.classList.add('active-section-4')
-    //       scheamImg[i].classList.add('show');
-    //     }
-    // })
-    
-    // e.addEventListener('mouseout', () => {
-    //   for (let i = 0; i < 4; i++ ) {
-    //     plantScheam.classList.remove(`active-section-${i+1}`) 
-    //     scheamImg[i].classList.remove('show')
-    //   }
-    //   plantScheam.classList.add('active-section-1');
-    //   scheamImg[i].classList.add('show');
-    // })
-    e.addEventListener('click', () => {
-      for (let i = 0; i < 4; i++ ) {
-        plantScheam.classList.remove(`active-section-${i+1}`) 
-        scheamImg[i].classList.remove('show')
-      }
-      if (i === 0) {
-        plantScheam.classList.add('active-section-1');
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 1) {
-        plantScheam.classList.add('active-section-2')
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 2) {
-        plantScheam.classList.add('active-section-3')
-        scheamImg[i].classList.add('show');
-      }
-      if (i === 3) {
-        plantScheam.classList.add('active-section-4')
-        scheamImg[i].classList.add('show');
-      }
-  })
-  })
+    const plantScheam = $('.about-plant__scheam');
+    const linesElem = $('.scheam__lines .line')
+
+    linesElem.each((idx, element) => {
+      $(element).on('click', () => {
+        plantScheam.removeClass()
+        plantScheam.addClass(`about-plant__scheam active-section-${idx + 1}`);
+      })
+    });
 
     // SLIDERS
     $("#mainSlider").slick({

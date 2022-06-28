@@ -36,6 +36,11 @@
     align-items: center;
     justify-items: center;
     row-gap: 16px;
+    
+    * {
+      align-self: center;
+      justify-self: center;
+    }
 
     @include md {
       grid-template-columns: repeat(2, 1fr);
