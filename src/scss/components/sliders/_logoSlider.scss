@@ -1,13 +1,13 @@
 .fluid-wrapper.bg-slider-logo {
-  @include image-set("../../assets/sliderlogobg-3");
+  @include image-set("../assets/sliderlogobg-3");
   @include bg-cover;
   
   @include md {
-    @include image-set("../../assets/sliderlogobg-2");
+    @include image-set("../assets/sliderlogobg-2");
   }
   
   @include xl {
-    @include image-set("../../assets/sliderlogobg-1");
+    @include image-set("../assets/sliderlogobg-1");
   }
 }
 

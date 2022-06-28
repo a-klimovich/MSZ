@@ -8,7 +8,7 @@
 
     <main class="main">
       @@include('../components/HeaderTitle/index.html', { 
-        'image': '../assets/img/header-img-4.jpg',
+        'image': './assets/img/header-img-4.jpg',
         'title': 'КОБРИНСКИЕ СЫРЫ ФАСОВАННЫЕ'
       })
       @@include('../components/Breadcrumbs/index.html')
@@ -22,7 +22,7 @@
           
           <div class="grid-layout-col grid-layout-col--first">
             <div class="image">
-              <img src="../assets/img/product-7.jpg" alt="product">
+              <img src="./assets/img/product-7.jpg" alt="product">
               <button type="button" class="btn btn-reset btnZoomImage">
                 @@include('../assets/search-icon.svg')
               </button>
@@ -30,12 +30,12 @@
 
             <div class="table">
               @@loop('../partials/table-row.html', [
-                { "image": "../assets/products-icons/Products_icon_1.png", "title": "Жирность:", "text": "50%" },
-                { "image": "../assets/products-icons/Products_icon_2.png", "title": "Вес:", "text": "200-300г." },
-                { "image": "../assets/products-icons/Products_icon_3.png", "title": "Упаковка:", "text": "Полимерная пленка, в газовой среде" },
-                { "image": "../assets/products-icons/Products_icon_4.png", "title": "Срок годности:", "text": "210 суток" },
-                { "image": "../assets/products-icons/Products_icon_5.png", "title": "Количество в тарном месте:", "text": "16 шт." },
-                { "image": "../assets/products-icons/Products_icon_6.png", "title": "Количество ящиков на полете:", "text": "210 шт." }
+                { "image": "./assets/products-icons/Products_icon_1.png", "title": "Жирность:", "text": "50%" },
+                { "image": "./assets/products-icons/Products_icon_2.png", "title": "Вес:", "text": "200-300г." },
+                { "image": "./assets/products-icons/Products_icon_3.png", "title": "Упаковка:", "text": "Полимерная пленка, в газовой среде" },
+                { "image": "./assets/products-icons/Products_icon_4.png", "title": "Срок годности:", "text": "210 суток" },
+                { "image": "./assets/products-icons/Products_icon_5.png", "title": "Количество в тарном месте:", "text": "16 шт." },
+                { "image": "./assets/products-icons/Products_icon_6.png", "title": "Количество ящиков на полете:", "text": "210 шт." }
               ])
             </div>
           </div>

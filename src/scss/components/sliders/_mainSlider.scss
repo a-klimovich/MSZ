@@ -4,7 +4,7 @@
   }
 
   .main-slide-item {
-    @include image-set("../../assets/img/main-slider-sm");
+    @include image-set("../assets/img/main-slider-sm");
     @include bg-cover;
     height: 178px;
     display: flex;
@@ -27,7 +27,7 @@
     }
 
     @include md {
-      @include image-set("../../assets/img/main-slider-md");
+      @include image-set("../assets/img/main-slider-md");
       height: 305px;
 
       &__text-1 {
@@ -46,7 +46,7 @@
     }
 
     @include xl {
-      @include image-set("../../assets/img/main-slider-xl");
+      @include image-set("../assets/img/main-slider-xl");
       height: 755px;
 
       &__text-1 {

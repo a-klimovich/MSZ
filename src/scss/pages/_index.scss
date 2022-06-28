@@ -413,15 +413,15 @@
   }
 
   .bg-img-exclusive {
-    @include image-set("../../assets/img/a3");
+    @include image-set("../assets/img/a3");
     @include bg-cover;
 
     @include md {
-      @include image-set("../../assets/img/a2");
+      @include image-set("../assets/img/a2");
     }
 
     @include lg {
-      @include image-set("../../assets/img/a1");
+      @include image-set("../assets/img/a1");
     }
   }
 
