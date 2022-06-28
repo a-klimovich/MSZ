@@ -1,58 +1,5 @@
-$(document).ready(function () {
-  ymaps.ready(init);
-  function init(){ 
-    if ($('#storMap1')) {
-      var storMap1 = new ymap.Map('storMap1', {
-        center: [10, 11],
-        zoom: 15,
-      })
-      // var storMap2 = new ymap.Map('storMap2', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap3 = new ymap.Map('storMap3', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap4 = new ymap.Map('storMap4', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap5 = new ymap.Map('storMap5', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap6 = new ymap.Map('storMap6', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap7 = new ymap.Map('storMap7', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-      // var storMap8 = new ymap.Map('storMap8', {
-      //   center: [10, 11],
-      //   zoom: 15,
-      // })
-    }
-    
-
-    // if ('#map') {
-    //   var myMap = new ymaps.Map("map", {
-    //     center: [52.20, 24.33],
-    //     zoom: 15
-    //   });
-    // }
-
-    // if ('#map2') {
-    //   var myMap2 = new ymaps.Map("map2", {
-    //     center: [52.20, 24.33],
-    //     zoom: 15
-    //   });
-    // }
-  }
-
-  (function () {
+(function () {
+  $(document).ready(function () {
     window.onscroll = () => scrollFunction();
     // Base
     const cssClassActive = "active";
@@ -84,15 +31,22 @@ $(document).ready(function () {
         $shortInfo.toggleClass(cssClassOpen);
       }
       $burger.toggleClass("burger__active");
+      $searchInput.toggleClass('active');
+      $logoImage.toggleClass('is-hidden');
       $headerNav.toggleClass(cssClassOpen);
     });
+
+    const $searchInput = $('.form__label');
+    const $logoImage = $('.logo a');
 
     $submenuHeaderBtn.on("click", () => {
       if ($burger.hasClass("burger__active")) {
         $burger.toggleClass("burger__active");
         $headerNav.toggleClass(cssClassOpen);
       }
+      $searchInput.toggleClass('active');
       $shortInfo.toggleClass(cssClassOpen);
+      $logoImage.toggleClass('is-hidden');
     });
 
     // card open
@@ -276,6 +230,5 @@ $(document).ready(function () {
         },
       ]
     });
-  })();
-});
-
+  });
+})();

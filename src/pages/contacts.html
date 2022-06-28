@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   @@include('../utils/head.html')
-  <head>
-    <script 
-      src="https://api-maps.yandex.ru/2.1/?apikey=2c81e557-0efd-45b8-80fa-4d310f01d64a&lang=en_US" type="text/javascript">
-    </script>
-  </head>
+  @@include('../utils/headMapBox.html')
+
 <body class="page__body">
   <div class="main-wrapper contacts-page">
     @@include('../components/Header/index.html')
@@ -19,7 +16,7 @@
       <div class="container container--xl">
         <div class="contacts-page-wrapper">
 
-        <!-- <div id="map2" class="contacts-page__map"></div> -->
+        <div id="contactsMap" class="contacts-page__map"></div>
 
         <section class="department-contacts">
           <p class="department-contacts__title centered">Руководящий состав</p>
@@ -272,5 +269,15 @@
     @@include('../components/Footer/index.html')
   </div>
 </body>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2w0eDV5djR4MDJ5aDNkcWZkNHltYnRueSJ9.vDioPc-AyadxGUGN-7l2OA';
+    const map = new mapboxgl.Map({
+    container: 'contactsMap', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
 @@include('../utils/includes.html')
 </html>

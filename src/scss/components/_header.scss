@@ -263,6 +263,16 @@ $height-bottom: 82px;
       &__label {
         padding-left: 20px;
         position: relative;
+        display: none;
+        max-width: 245px;
+
+        @include rwd(1221) {
+          display: block;
+        }
+
+        &.active {
+          display: block;
+        }
       }
 
       &__input {
@@ -388,6 +398,11 @@ $height-bottom: 82px;
       background: white;
       top: 71px;
       padding: 16px 13px;
+      min-width: 100%;
+
+      @include rwd(423) {
+        min-width: 330px;
+      }
 
       .short-info-wrapper {
         flex-direction: column;
