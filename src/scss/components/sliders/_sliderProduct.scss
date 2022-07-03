@@ -58,7 +58,7 @@
 }
 
 .fluid-wrapper.bg-slider-logo-1 {
-  @include image-set("../assets/img/slider-newest-product-sm");
+  background-image: url('../assets/img/slider-newest-product-sm.jpg');
   @include bg-cover;
   padding-top: 32px;
   padding-bottom: 92px;
@@ -81,11 +81,11 @@
   }
 
   @include md {
-    @include image-set("../assets/img/slider-newest-product-md");
+    background-image: url('../assets/img/slider-newest-product-md.jpg');
     padding-top: 62px;
     padding-bottom: 144px;
   }
   @include lg {
-    @include image-set("../assets/img/slider-newest-product-lg");
+    background-image: url('../assets/img/slider-newest-product-lg.jpg');
   }
 }
