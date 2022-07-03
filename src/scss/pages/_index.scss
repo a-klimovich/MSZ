@@ -17,13 +17,20 @@
     }
 
     &__content {
+      display: flex;
+      flex-direction: column;
       text-align: center;
+      height: 495px;
+      width: 100%;
+
       @include md {
         text-align: left;
       }
+
       @include xl {
-        max-width: 335px;
+        width: 335px;
       }
+      
       .title {
         font-weight: 500;
         font-size: 24px;
@@ -37,25 +44,21 @@
           margin-top: 68px;
         }
       }
-      .subtitle {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21.94px;
-        color: $gray-2;
-        margin-bottom: 24px;
-      }
+
       .text {
         font-weight: 500;
         font-size: 18px;
         line-height: 21.94px;
         color: $gray-2;
-        margin-bottom: 40px;
-        @include md {
-          margin-bottom: 30px;
-        }
+        max-height: 263px;
+        overflow: hidden;
+        margin-bottom: auto;
       }
-      .btn-reset {
+
+      .btn-learn-more {
+        display: block;
         width: 273px;
+        margin: 0 auto;
       }
     }
 
@@ -63,12 +66,14 @@
       display: flex;
       width: 100%;
       margin-bottom: 50px;
-      height: 150px;
+      height: 170px;
+
       @include md {
         height: 330px;
         width: 540px;
         margin: auto;
       }
+
       @include xl {
         width: 760px;
       }
@@ -84,8 +89,8 @@
         height: 100%;
         width: 100%;
         margin-top: 20px;
-        max-width: 120px;
-        max-height: 120px;
+        max-width: 150px;
+        max-height: 150px;
 
         @include md {
           max-width: 282px;
