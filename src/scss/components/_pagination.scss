@@ -17,10 +17,6 @@
     }
   }
 
-  &__prev,  &__next {
-    display: flex;
-  }
-
   a {
     font-family: 'Century Gothic';
     width: 39px;
@@ -53,12 +49,20 @@
   }
   
   &__next, &__prev {
+    display: flex;
+
     svg {
       width: 24px;
       height: 18px;
     
       & path {
         fill: $gray-3;
+      }
+    }
+
+    &:hover {
+      svg path {
+        fill: $orange;
       }
     }
   }

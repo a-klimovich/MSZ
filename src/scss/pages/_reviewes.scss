@@ -130,6 +130,13 @@
       font-size: 13px;
       line-height: 16px;
       color: $gray-2;
+      transition: ease-in-out 0.355s;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $white;
+      }
 
       @include md {
         width: 226px;
@@ -138,12 +145,6 @@
         font-size: 18px;
         line-height: 22px;
       }
-    }
-  }
-  .section-menu__list {
-    justify-content: space-around;
-    @include md {
-      justify-content: space-between;
     }
   }
 }

@@ -51,10 +51,4 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  .section-menu__list {
-    justify-content: space-around;
-    @include md {
-      justify-content: space-between;
-    }
-  }
 }

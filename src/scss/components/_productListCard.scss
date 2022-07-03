@@ -13,6 +13,16 @@
 
   @include xl {
     height: 484px;
+
+    &:hover {
+      .list-wrapper .list-menu {
+        display: flex;
+      }
+  
+      .counter::before {
+        content: '-';
+      }
+    }
   }
 
   .list-wrapper {
@@ -153,12 +163,16 @@
   &.active {
     height: auto;
     
-    @include xl {
-      height: 484px;
-    }
-
     .list-menu {
       display: flex;
+    }
+
+    @include xl {
+      height: 484px;
+
+      .list-menu {
+        display: none;
+      }
     }
 
     .counter::before {
