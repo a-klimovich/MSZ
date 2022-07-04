@@ -157,7 +157,7 @@ $slick-opacity-not-active: 0.25 !default;
         position: absolute;
         top: 0;
         left: 0;
-        content: $slick-dot-character;
+        content: '';
         width: 20px;
         height: 20px;
         font-size: $slick-dot-size;

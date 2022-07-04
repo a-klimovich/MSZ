@@ -43,8 +43,15 @@ $height-bottom: 82px;
     @include flex-v-center;
     height: $height-top;
     border-bottom: 2px solid $gray-5;
-    padding-left: calc(8vw - 4rem);
-    padding-right: calc(30px - 3vw);
+
+    @include md {
+      padding-left: 0;
+    }
+
+    @include lg {
+      padding-left: calc(8vw - 4rem);
+      padding-right: calc(30px - 3vw);
+    }
 
     &__list {
       @include flex-all-sb;
@@ -55,6 +62,10 @@ $height-bottom: 82px;
         @include flex-v-center;
         height: 100%;
         position: relative;
+
+        ul {
+          max-width: fit-content;
+        }
 
         &:hover {
           position: relative;
@@ -96,7 +107,6 @@ $height-bottom: 82px;
       display: none;
 
       background: $white;
-      min-width: 320px;
       width: 100%;
       z-index: 9;
       border-bottom: 4px solid $orange;

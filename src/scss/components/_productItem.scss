@@ -16,6 +16,8 @@
 
     .icone {
       margin-right: 22px;
+      display: flex;
+      align-items: center;
     }
 
     .text-wrapper {
@@ -28,10 +30,14 @@
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 5px;
+        display: flex;
+        align-items: center;
 
         @include md {
           font-size: 22px;
           line-height: 27px;
+          height: 54px;
+          overflow: hidden;
         }
       }
 
@@ -43,6 +49,8 @@
         @include md {
           font-size: 16px;
           line-height: 20px;
+          height: 40px;
+          overflow: hidden;
         }
       }
     }

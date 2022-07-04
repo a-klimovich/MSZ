@@ -30,8 +30,16 @@
     justify-items: center;
     row-gap: 16px;
 
-    img {
+    a {
+      overflow: hidden;
+      display: inline-block;
       height: 180px;
+
+      &:hover {
+        img {
+          transform: scale(1.01);
+        }
+      }
     }
 
     @include md {
@@ -39,7 +47,19 @@
       gap: 17px;
 
       img {
+        height: 100%;
+      }
+
+      a {
+        overflow: hidden;
+        display: inline-block;
         height: 208px;
+  
+        &:hover {
+          img {
+            transform: scale(1.01);
+          }
+        }
       }
     }
 
@@ -47,8 +67,16 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
 
-      img {
+      a {
+        overflow: hidden;
+        display: inline-block;
         height: 348px;
+  
+        &:hover {
+          img {
+            transform: scale(1.01);
+          }
+        }
       }
     }
   }

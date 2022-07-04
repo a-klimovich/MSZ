@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 @@include('../utils/head.html')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body class="page__body">
   <div class="main-wrapper packaged-product-item">
@@ -22,7 +24,11 @@
           
           <div class="grid-layout-col grid-layout-col--first">
             <div class="image">
-              <img src="./assets/img/product-7.jpg" alt="product">
+              <div class="imageGalery">
+                <a href="./assets/img/product-7.jpg">
+                  <img src="./assets/img/product-7.jpg" alt="First image">
+                </a>
+              </div>
               <button type="button" class="btn btn-reset btnZoomImage">
                 @@include('../assets/search-icon.svg')
               </button>
@@ -71,5 +77,9 @@
 </body>
 
 @@include('../utils/includes.html')
-
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.imageGalery');
+  });
+</script>
 </html>
