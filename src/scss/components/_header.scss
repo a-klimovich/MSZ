@@ -63,12 +63,10 @@ $height-bottom: 82px;
         height: 100%;
         position: relative;
 
-        ul {
-          max-width: fit-content;
-        }
-
         &:hover {
-          position: relative;
+          .drop-down-nav-item {
+            display: block;
+          }
 
           &::after {
             @include pseudo;
@@ -77,17 +75,6 @@ $height-bottom: 82px;
             height: 3px;
             background: $orange;
             width: 100%;
-          }
-
-          .drop-down-nav-item {
-            position: absolute;
-            top: calc(100% + 1px);
-            left: 0;
-            display: block;
-
-            li::after {
-              content: none;
-            }
           }
         }
       }
@@ -105,11 +92,21 @@ $height-bottom: 82px;
 
     .drop-down-nav-item {
       display: none;
-
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
       background: $white;
       width: 100%;
       z-index: 9;
       border-bottom: 4px solid $orange;
+
+      @include rwd(1220) {
+        min-width: 320px;
+      }
+
+      li::after {
+        content: none;
+      }
 
       li:not(:last-child) {
         border-bottom: 2px solid $gray-5;
