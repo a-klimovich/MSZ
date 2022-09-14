@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   @@include('../utils/head.html')
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <body class="page__body">
   <div class="main-wrapper for-client">
     @@include('../components/Header/index.html')
@@ -21,12 +24,22 @@
                 <br><br>Один из старейших методов, используемых людьми для получения из молока продуктов с более длительным сроком хранения, – ферментация. Есть сведения, что такие продукты начали изготавливать 10–15 тыс. лет назад, когда люди перешли от собирательства к производству пищи. Это связано с одомашниванием животных (коров, овец, коз, буйволов и верблюдов). Археологические данные свидетельствуют о том, что некоторые цивилизации (например, шумеры и вавилоняне в Месопотамии, жители Фороса на северовостоке Африки) были весьма сведущи в сельском хозяйстве и животноводстве (в частности, в производстве таких ферментированных молочных продуктов, как йогурт). Йогурт появился на Среднем Востоке, и технология его приготовления складывалась и совершенствовалась благодаря искусству живших там кочевников. Вера в благотворное влияние йогурта на организм человека существовала у многих цивилизаций. Например, считалось, что французского императора Франциска I вылечили от подтачивающей здоровье болезни с помощью йогурта из козьего молока.
               </div>
 
-              <div class="image-wrapper mb-7">
-                <img src="./assets/img/product-1.jpg" alt="content image">
-                <img src="./assets/img/product-1.jpg" alt="content image">
-                <img src="./assets/img/product-1.jpg" alt="content image">
-                <img src="./assets/img/product-1.jpg" alt="content image">
-                <img src="./assets/img/product-1.jpg" alt="content image">
+              <div class="for-client__image-grid image-wrapper mb-7">
+                <a href="./assets/img/product-1.jpg">
+                  <img src="./assets/img/product-1.jpg" alt="content image">
+                </a>
+                <a href="./assets/img/product-1.jpg">
+                  <img src="./assets/img/product-1.jpg" alt="content image">
+                </a>
+                <a href="./assets/img/product-1.jpg">
+                  <img src="./assets/img/product-1.jpg" alt="content image">
+                </a>
+                <a href="./assets/img/product-1.jpg">
+                  <img src="./assets/img/product-1.jpg" alt="content image">
+                </a>
+                <a href="./assets/img/product-1.jpg">
+                  <img src="./assets/img/product-1.jpg" alt="content image">
+                </a>
               </div>
             </div>
           </div>
@@ -54,6 +67,10 @@
     @@include('../components/Footer/index.html')
   </div>
 </body>
-
 @@include('../utils/includes.html')
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.for-client__image-grid');
+  });
+</script>
 </html>
