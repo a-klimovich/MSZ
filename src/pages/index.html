@@ -70,38 +70,102 @@
             высококачественного отборного молока.</p>
 
           <div class="production__gred">
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-1.jpg',
-              'title': 'Кобринские сыры',
-              'subtitle': 'Всегда только лучшее',
-            })
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-2.jpg',
-              'title': 'Фасованные сыры',
-              'subtitle': 'Сыры наполненные вкусом и любовью',
-            })
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-3.jpg',
-              'title': 'Йогурты',
-              'subtitle': 'Вкусно и полезно',
-            })
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-4.jpg',
-              'title': 'Цельномолочная продукция',
-              'subtitle': 'Польза и натуральный вкус',
-            })
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-1.jpg" alt="">
+              </div>
             
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-5.jpg',
-              'title': 'Кисломолочная продукция',
-              'subtitle': 'Источник жизненной энергии',
-            })
-
-            @@include('../components/ProductItem/index.html', {
-              'image': './assets/img/product-6.jpg',
-              'title': 'Мороженое Бринко-айс',
-              'subtitle': 'Широкий ассортимент',
-            })
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-1.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Кобринские сыры</h4>
+                  <p class="subtitle">Кобринские сыры</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-2.jpg" alt="">
+              </div>
+            
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-2.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Фасованные сыры</h4>
+                  <p class="subtitle">Сыры наполненные вкусом и любовью</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-3.jpg" alt="">
+              </div>
+            
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-3.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Йогурты</h4>
+                  <p class="subtitle">Вкусно и полезно</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-4.jpg" alt="">
+              </div>
+            
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-4.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Цельномолочная продукция</h4>
+                  <p class="subtitle">Польза и натуральный вкус'</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-5.jpg" alt="">
+              </div>
+            
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-5.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Кисломолочная продукция</h4>
+                  <p class="subtitle">Источник жизненной энергии'</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-item__image">
+                <img src="./assets/img/product-6.jpg" alt="">
+              </div>
+            
+              <div class="product-item__content">
+                <div class="icone">
+                  @@include('../assets/product-item-6.svg')
+                </div>
+                
+                <div class="text-wrapper">
+                  <h4 class="title">Мороженое Бринко-айс</h4>
+                  <p class="subtitle">Широкий ассортимент</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

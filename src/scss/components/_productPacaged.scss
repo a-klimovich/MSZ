@@ -15,9 +15,15 @@
   }
 
   &__image {
-    @include bg-cover;
-    background-image: url('../assets/img/product-item-1.jpg');
-    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      object-fit: cover;
+    }
+
     height: 156px;
 
     @include md {

@@ -93,22 +93,22 @@
       {
         title: 'О ЗАВОДЕ',
         text: 'Работаем с 1939 <br><br> Открытое акционерное общество «Кобринский маслодельно-сыродельный завод» это предприятие с 80-летним опытом работы и уникальными традициями производства. Мы с гордостью можем вспомнить каждый год работы завода. Нам есть, о чем рассказать и чем гордиться!',
-        href: '#',
+        href: '#a',
       },
       {
         title: 'ПРОИЗВОДСТВО',
         text: 'Работаем с 1939 <br><br> Открытое акционерное общество',
-        href: '#',
+        href: '#b',
       },
       {
         title: 'МИССИЯ',
         text: 'Работаем с 1939 <br><br> Открытое акционерное общество «Кобринский маслодельно-сыродельный завод»',
-        href: '#',
+        href: '#c',
       },
       {
         title: 'ПОЛИТИКА',
         text: 'Работаем с 1939 <br><br> <b> Открытое акционерное общество «Кобринский</b> маслодельно-сыродельный завод»',
-        href: '#',
+        href: '#d',
       },
     ];
 
@@ -124,29 +124,6 @@
         $aboutPlantContentTitle.html(scheamContetn[idx].title);
         $aboutPlantContentText.html(scheamContetn[idx].text);
         $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href);
-
-        // switch (idx) {
-        //   case 0:
-            
-        //     break;
-        //   case 1:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   case 2:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   case 3:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   default:
-        //     break;
-        // }
       })
     });
 
