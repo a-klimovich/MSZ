@@ -37,6 +37,10 @@
       color: $orange;
       margin-bottom: 29px;
 
+      a {
+        color: $orange;
+      }
+
       @include md {
         font-size: 22px;
         line-height: 27px;

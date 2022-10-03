@@ -1,7 +1,6 @@
 .production-list-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: fit-content;
   height: 332px;
   background-color: $white;
@@ -26,7 +25,6 @@
   }
 
   .list-wrapper {
-    margin-bottom: auto;
     position: relative;
 
     .list-image {

@@ -1,5 +1,9 @@
 .news-variant-page {
   .news-variant {
+    ul {
+      padding-left: 25px;
+      margin-bottom: 1rem;
+    }
     &__imgs {
       padding: 19px 0 23px;
       display: flex;
