@@ -1,5 +1,6 @@
 (function () {
   $(document).ready(function () {
+    const clientHeaderHeight = $("header")[0].clientHeight;
     window.onscroll = () => scrollFunction();
     // Base
     const cssClassActive = "active";
@@ -14,14 +15,17 @@
 
     // Header on scroll
     function scrollFunction() {
+      const $header = $("header");
+      const $body = $("body");
       const scrollTop = $(document.body).scrollTop();
       const scrollTopDocumentElement = $(document.documentElement).scrollTop();
-      const $header = $("header");
 
-      if (scrollTop > 166 || scrollTopDocumentElement > 166) {
+      if (scrollTop > clientHeaderHeight || scrollTopDocumentElement > clientHeaderHeight) {
         $header.addClass("scroll");
+        $body.addClass("scroll");
       } else {
         $header.removeClass("scroll");
+        $body.removeClass("scroll");
       }
     }
 

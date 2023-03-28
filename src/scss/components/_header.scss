@@ -465,6 +465,7 @@ $height-bottom: 82px;
 
   &.scroll {
     position: fixed;
+    top: 0;
 
     .short-info,
     .language {

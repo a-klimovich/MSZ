@@ -15,6 +15,14 @@
 .page__body {
   min-height: 100%;
   font-size: 16px;
+
+  &.scroll {
+    margin-top: 71px;
+    
+    @include rwd(1221) {
+      margin-top: 168px;
+    }
+  }
 }
 
 .main-wrapper {
