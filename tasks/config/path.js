@@ -36,4 +36,8 @@ module.exports = {
     src: pathSrc + '/vendors/**/*.css',
     build: pathBuild + '/css',
   },
+  headConnect: {
+    src: pathSrc + '/headConnect/*.js',
+    build: pathBuild + '/js',
+  }
 }

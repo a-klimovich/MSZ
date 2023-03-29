@@ -37,6 +37,7 @@ const build = series(
     scriptTasks.script,
     fonts,
     images,
+    scriptTasks.headConnect,
     scriptTasks.vendorsScript,
     stylesTasks.vendorsStyles
   ),

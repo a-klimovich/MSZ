@@ -24,7 +24,14 @@ const vendorsScript = () => {
     .pipe(dest(path.vendorsJS.build))
 };
 
+const headConnect = () => {
+  return src(path.headConnect.src)
+    .pipe(gulpIf(processes.isProd, minify()))
+    .pipe(dest(path.headConnect.build))
+};
+
 module.exports = {
   script,
   vendorsScript,
+  headConnect
 };
