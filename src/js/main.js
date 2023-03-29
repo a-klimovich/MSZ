@@ -61,11 +61,15 @@
     
     questionsCard.each((i, elem) => {
       const btnOpenAnswer = $(".btnOpenAnswer", elem);
-      const contentAnswer = $(".content__answer", elem);
+      // const contentAnswer = $(".content__answer", elem);
       
+
       btnOpenAnswer.on("click", () => {
-        btnOpenAnswer.toggleClass(cssClassActive);
-        contentAnswer.toggleClass(cssClassIsHidden);
+        questionsCard.removeClass(cssClassActive);
+        $(elem).toggleClass(cssClassActive);
+        // btnOpenAnswer.toggleClass(cssClassActive);
+        // contentAnswer.toggleClass(cssClassIsHidden);
+        // contentAnswer.siblings(".content__answer").addClass(cssClassIsHidden);
       });
     })
 
@@ -139,6 +143,8 @@
       slidesToShow: 1,
       arrows: false,
       dots: true,
+      autoplay: true,
+      infinity: true,
       responsive: [
         {
           breakpoint: 1200,

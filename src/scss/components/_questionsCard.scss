@@ -3,6 +3,26 @@
   justify-content: space-between;
   padding: 10px 14px 8px 8px;
 
+  &.active {
+    .btn-arrow {
+      border-color: $orange;
+
+      svg {
+        transform: rotate(-90deg);
+      }
+  
+      svg path {
+        fill: $orange;
+      }
+    }
+
+    .content {
+      &__answer {
+        display: block;
+      }
+    }
+  }
+
   @include md {
     padding: 20px 45px 28px 28px;
   }
@@ -23,18 +43,6 @@
 
       path {
         fill: #828282;
-      }
-    }
-
-    &.active {
-      border-color: $orange;
-
-      svg {
-        transform: rotate(-90deg);
-      }
-
-      svg path {
-        fill: $orange;
       }
     }
 
@@ -78,6 +86,7 @@
     }
 
     &__answer {
+      display: none;
       padding-top: 10px;
       color: $orange;
     }
