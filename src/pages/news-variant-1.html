@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   @@include('../utils/head.html')
-  @@include('../utils/headMapBox.html')
+  @@include('../utils/yandexMapConnect.html')
   
   <body class="page__body">
     <div class="main-wrapper news-variant-page">
@@ -67,16 +67,15 @@
 
       @@include('../components/Footer/index.html')
     </div>
-  </body>
 
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2w0eDV5djR4MDJ5aDNkcWZkNHltYnRueSJ9.vDioPc-AyadxGUGN-7l2OA';
-    const map = new mapboxgl.Map({
-      container: 'mapNews', // container ID
-      style: 'mapbox://styles/mapbox/streets-v11', // style URL
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9 // starting zoom
-    });
-</script>
-  @@include('../utils/includes.html')
+    <script>
+      ymaps.ready(() => {
+        const map = new ymaps.Map("mapNews", {
+          center: [55.76, 37.64],
+          zoom: 10,
+        });
+      });
+    </script>
+    @@include('../utils/includes.html')
+  </body>
 </html>

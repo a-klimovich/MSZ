@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 @@include('../utils/head.html')
-@@include('../utils/headMapBox.html')
+@@include('../utils/yandexMapConnect.html')
 
 <body class="page__body">
   <div class="main-wrapper us-stores">
@@ -84,60 +84,22 @@
 
     @@include('../components/Footer/index.html')
   </div>
+
+  <script>
+    ymaps.ready(() => {
+      const addressCards = $(".address-card");
+      
+      if (addressCards.length) {
+        addressCards.each((idx, item) => {
+          new ymaps.Map(`storMap${idx + 1}`, {
+            center: [55.76, 37.64],
+            zoom: 10
+          });
+        });
+      }
+    });
+  </script>
+  
+  @@include('../utils/includes.html')
 </body>
-
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2w0eDV5djR4MDJ5aDNkcWZkNHltYnRueSJ9.vDioPc-AyadxGUGN-7l2OA';
-  const map = new mapboxgl.Map({
-    container: 'storMap1',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapA = new mapboxgl.Map({
-    container: 'storMap2',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapB = new mapboxgl.Map({
-    container: 'storMap3',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapC = new mapboxgl.Map({
-    container: 'storMap4',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapD = new mapboxgl.Map({
-    container: 'storMap5',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapE = new mapboxgl.Map({
-    container: 'storMap6',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapF = new mapboxgl.Map({
-    container: 'storMap7',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapG = new mapboxgl.Map({
-    container: 'storMap8',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-</script>
-
-@@include('../utils/includes.html')
-
 </html>
