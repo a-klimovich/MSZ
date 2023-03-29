@@ -1,19 +1,6 @@
 
 .news-variant-page {
   .news-variant {
-    ul {
-      padding-left: 25px;
-      margin-bottom: 1rem;
-    }
-    &__text {
-      font-size: 16px;
-      color: $gray-2;
-      letter-spacing: -0.02em;
-
-      @include md {
-        font-size: 24px;
-      }
-    }
     &__text-before {
       margin-bottom: 21px;
 

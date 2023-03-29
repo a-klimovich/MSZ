@@ -289,9 +289,18 @@ $height-bottom: 82px;
         padding-left: 27px;
         padding-right: 25px;
         border: 1px solid #bdbdbd;
+        font-size: initial;
 
         &::placeholder {
           color: $gray-4;
+        }
+
+        @include lg {
+          font-size: 20px;
+
+          &::placeholder {
+            font-size: 20px;
+          }
         }
       }
 
