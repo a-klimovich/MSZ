@@ -1,4 +1,19 @@
 <div class="header-title">
-  <img src="@@image" alt="image title" class="header-img">
+  <img src="@@image" alt="image title" class="header-img" data-parallax-speed="0.2">
   <h1>@@title</h1>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const scrollTop = $(this).scrollTop();
+      const parallaxElements = $(".header-img");
+
+      parallaxElements.each(function() {
+        const parallaxElement = $(this);
+        const parallaxSpeed = parallaxElement.data("parallax-speed");
+        const parallaxDistance = scrollTop * parallaxSpeed;
+
+        parallaxElement.css("transform", "translate3d(0, -" + (parallaxDistance / 2) + "px, 0)");
+      });
+    });
+  </script>
 </div>

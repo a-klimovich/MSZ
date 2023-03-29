@@ -6,6 +6,7 @@ $height-bottom: 82px;
   box-shadow: $box-shadow;
   background-color: $white;
   z-index: 9;
+  top: -100px;
 
   .burger {
     @include burger;
@@ -466,6 +467,7 @@ $height-bottom: 82px;
   &.scroll {
     position: fixed;
     top: 0;
+    transition: all 0.5s;
 
     .short-info,
     .language {
