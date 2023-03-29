@@ -34,16 +34,20 @@
     letter-spacing: -0.02em;
     color: $gray-2;
     margin-bottom: 2px;
+    height: calc(27px * 2);
+    display: inline-flex;
+    place-items: center;
+    place-content: center;
     
     @include md {
       font-size: 19px;
       line-height: 23px;
-      margin-bottom: 14px;
-      white-space: nowrap;
+      height: calc(23px * 2);
     }
     @include xl {
       font-size: 22px;
       line-height: 27px;
+      height: calc(27px * 2);
     }
   }
 
