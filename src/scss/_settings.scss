@@ -230,15 +230,6 @@ hr {
   &__content {
     display: flex;
     flex-direction: column;
-    margin-right: 0;
-    
-    @media screen and (min-width: 1200px) {
-      margin-right: calc(5vw - 1rem);
-    }
-    
-    @include xl {
-      margin-right: 90px;
-    }
   }
 
   &__nav {
@@ -256,8 +247,10 @@ hr {
   }
 
   @include xl {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     padding-top: 60px;
     margin-bottom: 70px;
+    gap: calc(5vw - 1rem);
   }
 }
