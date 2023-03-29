@@ -13,6 +13,9 @@
     const $submenuHeaderBtn = $(".submenu-header");
     const $shortInfo = $(".short-info");
 
+    // Pagination remove handler on active page link
+    $(".pagination .pagination__number.active")?.click((event) => event.preventDefault());
+
     // Header on scroll
     function scrollFunction() {
       const $header = $("header");
