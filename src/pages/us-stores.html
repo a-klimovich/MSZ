@@ -100,8 +100,6 @@
         addressCards.each((idx, item) => {
           const center = $(item).attr("data-latlng")?.split(',');
 
-          console.log(center);
-
           new ymaps.Map(`storMap${idx + 1}`, {
             center: center || [55.76, 37.64],
             zoom: 10
