@@ -14,9 +14,17 @@
       <nav class="nav" id="headerNav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a href="#" class="nav__link">
-              Главная
-            </a>
+            <div class="link-box">
+              <a href="#" class="nav__link">
+                Главная
+              </a>
+
+              <button class="btn-reset link-box__btn">
+                <svg width="16" height="16">
+                  <polygon points="0,8 8,0 8,16" fill="#808080"/>
+                </svg>
+              </button>
+            </div>
   
             <ul class="drop-down-nav-item list-reset">
               <li><a href="#">История</a></li>
@@ -108,7 +116,7 @@
   
       <form action="#" class="form">
         <label class="form__label js-focus-visible">
-          <input type="text" name="поиск" class="input-reset form__input" placeholder="поиск">
+          <input type="text" name="поиск" class="input-reset form__input" placeholder="Поиск">
           <button type="button" class="btn-reset form__btn">
             @@include('../../assets/search-icon.svg')
           </button>
