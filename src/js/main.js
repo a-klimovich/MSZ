@@ -14,6 +14,8 @@
     const $burger = $(".burger");
     const $submenuHeaderBtn = $(".submenu-header");
     const $shortInfo = $(".short-info");
+    const $searchInput = $(".form__label");
+    const $logoImage = $(".logo a");
 
     // Pagination remove handler on active page link
     $(".pagination .pagination__number.active")?.click((event) => event.preventDefault());
@@ -34,11 +36,16 @@
       }
     }
 
+    $(".overlay").on("click", () => {
+      $burger.removeClass("burger__active");
+      $headerNav.removeClass(cssClassOpen);
+      $searchInput.removeClass("active");
+      $logoImage.removeClass("is-hidden");
+      $("body").removeClass(cssClassOpen);
+    });
+
     // Header menu controllers
     $burger.on("click", () => {
-      if ($shortInfo.hasClass(cssClassOpen)) {
-        $shortInfo.toggleClass(cssClassOpen);
-      }
       $burger.toggleClass("burger__active");
       $searchInput.toggleClass("active");
       $logoImage.toggleClass("is-hidden");
@@ -46,21 +53,26 @@
       $("body").toggleClass(cssClassOpen);
     });
 
-    const $searchInput = $(".form__label");
-    const $logoImage = $(".logo a");
-
     $submenuHeaderBtn.on("click", () => {
       if ($burger.hasClass("burger__active")) {
-        $burger.toggleClass("burger__active");
-        $headerNav.toggleClass(cssClassOpen);
+        $burger.removeClass("burger__active");
+        $headerNav.removeClass(cssClassOpen);
       }
+
       $searchInput.toggleClass("active");
       $shortInfo.toggleClass(cssClassOpen);
       $logoImage.toggleClass("is-hidden");
+      $("body").removeClass(cssClassOpen);
     });
 
-    $(".nav__item .link-box").on("click", function () {
-      $(this).offsetParent().toggleClass(cssClassActive);
+    $(".nav__item").on("click", function () {
+      const isActive = $(this).hasClass(cssClassActive);
+      $(".nav__item").removeClass(cssClassActive);
+      if (!isActive) {
+        $(this).addClass(cssClassActive);
+      } else {
+        $(this).find("ul").slideUp();
+      }
     });
 
     $(".nav__item").each(function () {
@@ -69,7 +81,6 @@
       if (!hasUlInside) {
         $(this).find(".link-box > button").css("display", "none");
       }
-      console.log(hasUlInside);
     });
 
     // card open
