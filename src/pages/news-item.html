@@ -75,12 +75,11 @@
 
     @@include('../components/Footer/index.html')
   </div>
+  @@include('../utils/includes.html')
+  <script>
+    window.addEventListener('load', function() {
+      baguetteBox.run('.news-item-page__image-grid');
+    });
+  </script>
 </body>
-
-@@include('../utils/includes.html')
-<script>
-  window.addEventListener('load', function() {
-    baguetteBox.run('.news-item-page__image-grid');
-  });
-</script>
 </html>

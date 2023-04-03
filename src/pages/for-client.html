@@ -107,11 +107,11 @@
 
     @@include('../components/Footer/index.html')
   </div>
+  <script>
+    window.addEventListener('load', function() {
+      baguetteBox.run('.for-client__image-grid');
+    });
+  </script>
+  @@include('../utils/includes.html')
 </body>
-@@include('../utils/includes.html')
-<script>
-  window.addEventListener('load', function() {
-    baguetteBox.run('.for-client__image-grid');
-  });
-</script>
 </html>
