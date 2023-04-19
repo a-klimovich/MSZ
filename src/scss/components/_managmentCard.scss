@@ -2,24 +2,26 @@
   display: flex;
   flex-direction: column;
   padding: 16px 17px 16px;
+  padding-bottom: 10px;
   width: 100%;
   max-width: 381px;
   height: 606px;
   
   @include md {
     padding: 40px 19px 48px;
+    padding-bottom: 10px;
     height: 697px;
   }
 
   &__img {
     display: flex;
     place-content: center;
-    height: 338px;
+    min-height: 338px;
     overflow: hidden;
     margin-bottom: 3px;
 
     @include md {
-      height: 367px;
+      min-height: 367px;
       margin-bottom: 19px;
     }
 
@@ -37,7 +39,7 @@
     letter-spacing: -0.02em;
     color: $gray-2;
     margin-bottom: 2px;
-    height: calc(27px * 2);
+    height: 54px;
     display: inline-flex;
     place-items: center;
     place-content: center;
@@ -45,22 +47,26 @@
     @include md {
       font-size: 19px;
       line-height: 23px;
-      height: calc(23px * 2);
+      height: 46px;
     }
     @include xl {
       font-size: 22px;
       line-height: 27px;
-      height: calc(27px * 2);
+      height: 54px;
     }
   }
 
   &__job-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.02em;
     color: $orange;
     margin-bottom: 6px;
+    height: 44px;
   }
 
   &__about {
