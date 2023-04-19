@@ -39,5 +39,9 @@ module.exports = {
   headConnect: {
     src: pathSrc + '/headConnect/*.js',
     build: pathBuild + '/js',
+  },
+  loader: {
+    src: pathSrc + '/loader/**.*',
+    build: pathBuild + '/loader/',
   }
 }

@@ -8,6 +8,7 @@ const clear = require('./tasks/clear');
 const html = require('./tasks/html');
 const stylesTasks = require('./tasks/scss');
 const scriptTasks = require('./tasks/script');
+const loader = require('./tasks/loader');
 const fonts = require('./tasks/fonts');
 const images = require('./tasks/images');
 
@@ -39,7 +40,8 @@ const build = series(
     images,
     scriptTasks.headConnect,
     scriptTasks.vendorsScript,
-    stylesTasks.vendorsStyles
+    stylesTasks.vendorsStyles,
+    loader
   ),
 );
 
@@ -51,6 +53,7 @@ const dev = series(
 exports.html = html;
 exports.scss = stylesTasks.scss;
 exports.script = scriptTasks.script;
+exports.json = loader;
 exports.fonts = fonts;
 exports.images = images;
 
