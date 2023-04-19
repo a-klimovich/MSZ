@@ -1,48 +1,101 @@
+// .breadcrumbs {
+//   background-color: $gray-6;
+//   min-height: 8px;
+  
+//   a {
+//     color: $gray-2;
+//   }
+
+//   &__list {
+//     display: flex;
+//     padding: 25px 0;
+//     list-style: none;
+//   }
+
+//   &__item {
+//     @include pr(35px);
+//     position: relative;
+
+//     a {
+//       font-size: 22px;
+
+//       @include hover {
+//         color: $orange;
+//       }
+//     }
+
+//     .arrow {
+//       position: absolute;
+//       right: 15px;
+//       top: 1rem;
+//       transform: translate(0, -50%);
+//     }
+//   }
+
+//   &__item.current {
+//     a {
+//       color: $orange;
+//       font-weight: 700;
+//     }
+//     .arrow {
+//       display: none;
+//     }
+//   }
+// }
+
 .breadcrumbs {
   background-color: $gray-6;
   min-height: 8px;
-  
+
   a {
     color: $gray-2;
+
+    @include hover {
+      color: $orange;
+    }
   }
 
   &__list {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
     padding: 25px 0;
     list-style: none;
 
-    @include md {
-      display: flex;
-    }
-  }
+    .breadcrumbs__item:first-child {
+      padding-left: 0;
 
-  &__item {
-    @include pr(35px);
-    position: relative;
-
-    a {
-      font-size: 22px;
-
-      @include hover {
-        color: $orange;
+      &::after {
+        display: none;
       }
     }
 
-    .arrow {
-      position: absolute;
-      right: 15px;
-      top: 1rem;
-      transform: translate(0, -50%);
-    }
-  }
-
-  &__item.current {
-    a {
+    .breadcrumbs__item:last-child a {
       color: $orange;
       font-weight: 700;
     }
-    .arrow {
-      display: none;
+
+    .breadcrumbs__item {
+      position: relative;
+      padding-left: 2rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../assets/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 0.65rem 0.65rem;
+        width: 0.65rem;
+        height: 100%;
+        left: 0.5rem;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @include md {
+          background-size: 1rem 1rem;
+          width: 1rem;
+        }
+      }
     }
   }
 }
