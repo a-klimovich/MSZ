@@ -6,11 +6,18 @@
   position: relative;
   height: 280px;
 
+  &:hover .title {
+    color: $orange;
+  }
+
   @include md {
     height: 407px;
   }
 
   @include xl {
+    &:hover .title {
+      color: $gray-2;
+    }
     height: 368px;
   }
 
