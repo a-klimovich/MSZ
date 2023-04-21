@@ -5,6 +5,7 @@
     if (addressCards.length) {
       addressCards.each((idx, item) => {
         const center = $(item).attr("data-latlng")?.split(',');
+        const zoom = $(item).attr("data-zoom");
 
         let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
@@ -12,7 +13,7 @@
 
         let map = new ymaps.Map(`storMap${idx + 1}`, {
           center: center || [55.76, 37.64],
-          zoom: 15
+          zoom: Number(zoom) || 10
         });
 
         let myPlacemark = new ymaps.Placemark(
