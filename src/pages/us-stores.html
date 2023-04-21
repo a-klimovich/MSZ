@@ -4,6 +4,7 @@
 @@include('../utils/yandexMapConnect.html')
 
 <body class="page__body">
+  @@include('../components/Loader.html')
   <div class="main-wrapper us-stores">
     @@include('../components/Header/index.html')
 
@@ -88,21 +89,6 @@
   <script>
     window.addEventListener('load', function() {
       baguetteBox.run('.address-card__img');
-    });
-
-    ymaps.ready(() => {
-      const addressCards = $(".address-card");
-      
-      if (addressCards.length) {
-        addressCards.each((idx, item) => {
-          const center = $(item).attr("data-latlng")?.split(',');
-
-          new ymaps.Map(`storMap${idx + 1}`, {
-            center: center || [55.76, 37.64],
-            zoom: 10
-          });
-        });
-      }
     });
   </script>
   

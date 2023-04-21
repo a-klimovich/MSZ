@@ -1,0 +1,17 @@
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  transition: left 1s;
+}
+
+.loader.isLoaded {
+  left: 100%;
+}
