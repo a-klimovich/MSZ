@@ -469,7 +469,7 @@ $height-bottom: 82px;
 
     .short-info {
       display: none;
-      position: absolute;
+      position: fixed;
       flex-direction: column;
       height: fit-content;
       right: 0;
@@ -540,7 +540,6 @@ $height-bottom: 82px;
     top: 0;
     transition: all 0.5s;
 
-    .short-info,
     .language {
       display: none;
     }

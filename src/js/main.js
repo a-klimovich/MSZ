@@ -49,6 +49,7 @@
       $burger.toggleClass("burger__active");
       $searchInput.toggleClass("active");
       $logoImage.toggleClass("is-hidden");
+      $shortInfo.removeClass(cssClassOpen)
       $headerNav.toggleClass(cssClassOpen);
       $("body").toggleClass(cssClassOpen);
     });

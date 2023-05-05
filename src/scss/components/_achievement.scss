@@ -4,18 +4,16 @@
   align-items: center;
   justify-content: center;
   padding: 13px;
-  width: 300px;
+  width: 100%;
   height: 308px;
   
   @include md {
     flex-direction: row;
     padding: 28px;
-    width: 697px;
     height: 261px;
   }
 
   @include xl {
-    width: 100%;
     height: 338px;
   }
 
@@ -27,6 +25,7 @@
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
 
     @include md {
@@ -38,6 +37,9 @@
 
     @include xl {
       max-width: 497px;
+      // img {
+      //   object-fit: cover;
+      // }
     }
   }
 
@@ -47,9 +49,7 @@
     justify-content: space-between;
     height: 100%;
     position: relative;
-    @include md {
-      width: 334px;
-    }
+
     @include xl {
       width: 514px;
       justify-content: center;
